@@ -45,13 +45,8 @@ fdffdfdf
             </Grid>
             </Grid>
 
-
             <Grid item xs={8} display={'flex'} className="center" >
             
-
-
-
-
             <Grid item xs={4} color={'white'} >
             <Typography variant="subtitle2">Sobre</Typography>
             <Typography variant="subtitle2">Produtos</Typography>
@@ -70,15 +65,9 @@ fdffdfdf
             <img className="lampadaFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/ICONEWEB-05.png?updatedAt=1681503430974" alt="logo texto"/ >
             </Grid>
             
-            
-            
-            
-            
-            
             </Grid>
             <Grid style={{backgroundColor:'#1FE291', color:'white' }} item xs={2}>
             <Typography variant="h6">Perguntas Frequentes</Typography>
-
 
             <Grid display={'flex'} >
                           <img className="logoBoleto" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/boleto.png?updatedAt=1681505619680" alt="logo texto"/ >
