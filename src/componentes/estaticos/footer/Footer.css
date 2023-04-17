@@ -1,3 +1,43 @@
 .logo {
+
+}
+.logoFooter{
     width: 40%;
+
+}
+
+.lampadaFooter{
+    width: 20%;
+
+}
+.left {
+
+    align-items: center
+;
+}
+
+.center {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoCard {
+    width: 20%;
+}
+.logoBoleto {
+    width: 30%;
+}
+.logoPix {
+    width: 40%;
+}
+
+.CopyRight{
+    
+    align-items:center;
+    text-align:center; color:white; background-color:#06B566 ;
+    padding-top:0.4%;
+    height:4.6vh
+    
 }
