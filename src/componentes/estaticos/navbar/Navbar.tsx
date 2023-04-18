@@ -11,7 +11,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import { Link } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Navbar.css";
 
 function Navbar() {
@@ -97,9 +96,10 @@ function Navbar() {
             </Search>
           </Box>
           </Box>
-          <Box>
-            <PersonIcon></PersonIcon>
-            <AddShoppingCartIcon></AddShoppingCartIcon>
+          <Box display={'flex'} alignItems={'center'} paddingLeft={2}>
+            <Link to='/login'>
+              <PersonIcon></PersonIcon>
+            </Link>
           </Box>
         </Box>
       </AppBar>
