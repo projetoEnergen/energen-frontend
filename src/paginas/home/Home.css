@@ -1,0 +1,15 @@
+.imagemBanner{
+    background-image: url('./../../assets/imagemsustentavel.png');
+    background-repeat: 'no-repeat';
+    background-position:'center';
+    min-height: 80vh;
+    min-width: 120vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iconesProdutos{
+    height: 10vh;
+    width: 10vh;
+    padding: 10px;
+}
