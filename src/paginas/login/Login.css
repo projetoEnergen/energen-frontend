@@ -1,0 +1,6 @@
+.imagem {
+    background-image: url('https://ik.imagekit.io/energen/Banner/BannerLogin-10.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}

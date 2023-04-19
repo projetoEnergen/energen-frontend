@@ -1,8 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-
-import {Navigation} from 'react-minimal-side-navigation';
-import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
+import { Navigation } from 'react-router-dom';
 
 function Produtos() {
     return (

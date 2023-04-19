@@ -72,17 +72,19 @@ function Navbar() {
           </Box>
           <Box display={"flex"}>
             <Box mx={1} style={{ cursor: "pointer" }}>
+            <Link className="home" to='/home'>
               <Typography variant="h6">Home</Typography>
+              </Link>
             </Box>
             <Box mx={1} style={{ cursor: "pointer" }}>
-              <Typography variant="h6" color={"inherit"}>
-                Sobre
-              </Typography>
+            <Link className="sobre" to='/sobre'>
+              <Typography variant="h6" color={"inherit"}>Sobre</Typography>
+              </Link>
             </Box>
             <Box mx={1} style={{ cursor: "pointer" }}>
-              <Typography variant="h6" color={"inherit"}>
-                Produtos
-              </Typography>
+            <Link className="produtos" to='/produtos'>
+            <Typography variant="h6" color={"inherit"}>Produtos</Typography>
+            </Link>
             </Box>
             <Box>
             <Search>
@@ -97,9 +99,8 @@ function Navbar() {
           </Box>
           </Box>
           <Box display={'flex'} alignItems={'center'} paddingLeft={2}>
-            <Link to='/login'>
-              <PersonIcon></PersonIcon>
-            </Link>
+            <PersonIcon></PersonIcon>
+            <Link className="login" to='/login'>Login</Link>
           </Box>
         </Box>
       </AppBar>
