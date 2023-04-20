@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import { Navigation } from 'react-router-dom';
 
 function Produtos() {
     return (
@@ -18,19 +17,7 @@ function Produtos() {
 
            {/* menu produtos */}
           <Grid xs={2} item  >
-          
-          </Grid>
 
-
-              {/* Produtos */}
-            <Grid item xs={10} display={'flex'} style={{backgroundColor:'red'}}>
-              djsnjdnsjnjdnsjkendjksfbfn
-          </Grid>
-        
-        </Grid>
-      </>
-    );
-}
 export default Produtos
 
 
