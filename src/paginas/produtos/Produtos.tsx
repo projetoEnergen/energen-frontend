@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import { Navigation } from 'react-router-dom';
 
 function Produtos() {
     return (
@@ -18,7 +17,7 @@ function Produtos() {
 
            {/* menu produtos */}
           <Grid xs={2} item  >
-          <Navigation 
+          <Navigation
             // you can use your own router's api to get pathname
             activeItemId="/management/members"  
             onSelect={({itemId}) => {
