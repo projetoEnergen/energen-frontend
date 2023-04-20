@@ -63,14 +63,14 @@ function Navbar() {
           style={{ backgroundColor: "#1FE291", padding: "1%" }}
           display={"flex"}
         >
-          <Box>
+          <Box display={'flex'} flex={1}>
             <img
               className="logo"
               src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LOGO_NAVBAR.png?updatedAt=1681506741817"
               alt="logo EnerGen"
             />
           </Box>
-          <Box display={"flex"}>
+          <Box display={"flex"} justifyContent={'space-around'} width={'70%'} flex={2}>
             <Box mx={1} style={{ cursor: "pointer" }}>
             <Link className="home" to='/home'>
               <Typography variant="h6">Home</Typography>
@@ -100,6 +100,7 @@ function Navbar() {
           </Box>
           <Box display={'flex'} alignItems={'center'} paddingLeft={2}>
             <PersonIcon></PersonIcon>
+            <AddShoppingCartIcon />
             <Link className="login" to='/login'>Login</Link>
           </Box>
         </Box>
