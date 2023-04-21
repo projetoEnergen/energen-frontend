@@ -1,6 +1,6 @@
 .imagemBanner{
-    background-image: url('./../../assets/imagemsustentavel.png');
-    background-repeat: 'no-repeat';
+    background-image: url('https://ik.imagekit.io/energen/Banner/bannerDessaRedimensionado-14.png?updatedAt=1682008231610');
+
     background-position:'center';
     min-height: 80vh;
     min-width: 120vh;
@@ -12,4 +12,11 @@
     height: 10vh;
     width: 10vh;
     padding: 10px;
+}
+.alinha{
+    display: flex;
+    gap: 3%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }

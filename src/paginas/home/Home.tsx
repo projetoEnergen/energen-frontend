@@ -8,8 +8,9 @@ function Home() {
     <>
       <Grid container>
         <Grid alignItems="center" item xs={12}>
-          <div className="imagemBanner"></div>
+          <Box className="imagemBanner"></Box>
         </Grid>
+      </Grid>
         <Grid item xs={12}>
           <Typography variant="h3" component={"h3"} align="center">
             Sobre a troca: 
@@ -20,12 +21,12 @@ function Home() {
         </Typography>
 
         </Grid>
-
-        <Grid item xs={12} alignItems={"center"} >
-          <Typography variant="h3" component={"h3"} align="center">
+      
+        <Grid item  xs={12} >
+          <Typography variant="h5" component={"h5"} style={{margin: '30px'}} align="center">
             O que você quer comprar?
           </Typography>
-          <Box>
+          <Grid item xs={12}className="alinha">
               <img className="iconesProdutos" src="https://ik.imagekit.io/energen/Icones_Visual/maquina-de-lavar.png?updatedAt=1681779910220" alt="" />
 
               <img className="iconesProdutos" src="https://ik.imagekit.io/energen/Icones_Visual/geladeira.png?updatedAt=1681779909959" alt="" />
@@ -38,9 +39,9 @@ function Home() {
 
               <img className="iconesProdutos" src="https://ik.imagekit.io/energen/Icones_Visual/ventilador.png?updatedAt=1681779909886" alt="" />
 
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+    
     </>
   );
 }
