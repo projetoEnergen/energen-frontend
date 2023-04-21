@@ -14,7 +14,6 @@ function Produtos() {
           <Grid alignContent={'row'}>
           </Grid>
 
-
            {/* menu produtos */}
           <Grid xs={2} item  >
 
