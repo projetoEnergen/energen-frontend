@@ -71,7 +71,7 @@ function Navbar() {
               alt="logo EnerGen"
             />
           </Box>
-          <Box display={"flex"} justifyContent={'space-around'} width={'70%'} flex={2}>
+          <Box className ='alinhamento'display={"flex"} justifyContent={'space-around'} alignItems={'center'} width={'70%'} flex={2}>
             <Box mx={1} style={{ cursor: "pointer" }}>
             <Link className="login" to='/home'>
               <Typography variant="h6">Home</Typography>
@@ -87,21 +87,23 @@ function Navbar() {
             <Typography variant="h6" color={"inherit"}>Produtos</Typography>
             </Link>
             </Box>
-            <Box>
-            <Search>
+            <Box display={'flex'} alignItems={'center'} gap={3}>
+            <Search >
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
                 placeholder="Busca em EnerGen"
                 inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
+              />      
+            </Search> 
+      <AddShoppingCartIcon />
           </Box>
+
           </Box>
+        
           <Box display={'flex'} alignItems={'center'} paddingLeft={2}>
             <PersonIcon></PersonIcon>
-            <AddShoppingCartIcon />
             <Link className="login" to='/login'>Login</Link>
           </Box>
         </Box>

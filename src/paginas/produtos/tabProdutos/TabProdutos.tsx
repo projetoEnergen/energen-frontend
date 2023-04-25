@@ -1,37 +1,43 @@
-import React, {useState} from 'react'
-import { AppBar, Tab, Tabs, Typography} from '@material-ui/core';
-import {Box} from '@mui/material';
-import { TabContext, TabPanel } from '@material-ui/lab';
+import { TabContext, TabPanel } from '@material-ui/lab'
+import { AppBar, Tabs, Tab, Box, Typography, Grid } from '@mui/material';
+import React, { useState } from 'react'
+import { Produto } from '../../../models/Produto';
 import './TabProdutos.css'
-import Produtos from '../listaProdutos/Produtos';
-
+import ListaProduto from '../listaProdutos/ListaProduto';
 
 function TabProdutos() {
-    const [value, setValue] = useState('1')
-    function handleChange(event: React.ChangeEvent<{}>, newValue: string){
-        setValue(newValue);
-    }
+  const [value, setValue] = useState('1')
+function handleChange(event: React.ChangeEvent<{}>, newValue: string){
+setValue(newValue);
+}
   return (
     <>
       <TabContext value={value}>
-        <AppBar position="static">
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-            <Tab label= 'geladeira' value="1"/>
-            <Tab label='microondas' value="2" />
-          </Tabs>
-        </AppBar>
-        <TabPanel value="1" >
-          <Box display="flex" flexWrap="wrap" justifyContent="center">
-            <Produtos />
-          </Box>
-        </TabPanel>
-        <TabPanel value="2">
-          <Typography variant="h5" gutterBottom component="h5" align="center">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="center">
-          </Typography>
-        </TabPanel>
-      </TabContext>
+
+
+<AppBar position="static" className='barra'>
+<Tabs centered indicatorColor="secondary" onChange={handleChange}>
+<Tab label= "Refrigeradores" value="1"/>
+<Tab label="Televisores" value="2" />
+<Tab label="Ar-Condicionado" value="3" />
+<Tab label="Ventiladores" value="4" />
+<Tab label="outro que eu esqueci" value="5" />
+</Tabs>
+</AppBar>
+<TabPanel value="1" >
+<Box display="flex" flexWrap="wrap" justifyContent="center">
+      <ListaProduto />
+  </Box>
+</TabPanel>
+<TabPanel value="2">
+  
+<Typography variant="h5" gutterBottom color="textPrimary" component="h5" ></Typography>
+<Typography variant="body1" gutterBottom color="textPrimary"></Typography>
+</TabPanel>
+</TabContext>
     </>
-  );
+ 
+  )
 }
-export default TabProdutos;
+
+export default TabProdutos
