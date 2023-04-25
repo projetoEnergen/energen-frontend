@@ -58,7 +58,7 @@ function Navbar() {
   }));
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" className="menu">
         <Box
           sx={{ flexGrow: 1 }}
           style={{ backgroundColor: "#1FE291", padding: "1%" }}
@@ -73,17 +73,17 @@ function Navbar() {
           </Box>
           <Box display={"flex"} justifyContent={'space-around'} width={'70%'} flex={2}>
             <Box mx={1} style={{ cursor: "pointer" }}>
-            <Link className="home" to='/home'>
+            <Link className="login" to='/home'>
               <Typography variant="h6">Home</Typography>
               </Link>
             </Box>
             <Box mx={1} style={{ cursor: "pointer" }}>
-            <Link className="sobre" to='/sobre'>
+            <Link className="login" to='/sobre'>
               <Typography variant="h6" color={"inherit"}>Sobre</Typography>
               </Link>
             </Box>
             <Box mx={1} style={{ cursor: "pointer" }}>
-            <Link className="produtos" to='/produtos'>
+            <Link className="login" to='/produtos'>
             <Typography variant="h6" color={"inherit"}>Produtos</Typography>
             </Link>
             </Box>

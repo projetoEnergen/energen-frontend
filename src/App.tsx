@@ -4,7 +4,7 @@ import Footer from "./componentes/estaticos/footer/Footer";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import CadastroUsuario from "./paginas/cadastrousuario/CadastroUsuario";
-import Produtos from "./paginas/produtos/Produtos";
+import Produtos from "./paginas/produtos/listaProdutos/Produtos";
 import Sobre from "./paginas/sobre/Sobre";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import "./App.css";
