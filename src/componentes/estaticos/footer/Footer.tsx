@@ -12,7 +12,7 @@ function Footer() {
   return (
     <>
       <Grid className="left" spacing={0} container item xs={12} style={{backgroundColor:'#1FE291', height:'15vh'}}  >
-            <Grid style={{backgroundColor:'#1FE291'}} item xs={2}><img className="logoFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LogoFooter.png?updatedAt=1681508432602" alt="logo texto"/ >
+            <Grid style={{backgroundColor:'#1FE291', padding:'3vh'}} item xs={2}><img className="logoFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LogoFooter.png?updatedAt=1681508432602" alt="logo texto"/ >
             <Grid>
                           <EmailSharpIcon style={{color:'white'}}></EmailSharpIcon>
                           <TwitterIcon style={{color:'white'}}></TwitterIcon>
@@ -39,7 +39,7 @@ function Footer() {
             
             </Grid>
             <Grid style={{backgroundColor:'#1FE291', color:'white' }} item xs={2}>
-            <Typography variant="h6">Perguntas Frequentes</Typography>
+            <Typography  variant="h6">Formas de Pagamento</Typography>
 
             <Grid display={'flex'} >
                           <img className="logoBoleto" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/boleto.png?updatedAt=1681505619680" alt="logo texto"/ >
