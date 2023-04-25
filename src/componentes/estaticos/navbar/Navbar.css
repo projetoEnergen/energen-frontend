@@ -1,8 +1,16 @@
 .logo {
     width: 150px;
-    display: block;
+    display: flex;
 }
 
 .login {
     color: white;
+    text-decoration: none;
+}
+
+.menu{
+    position: static;
+    justify-content: center;
+    display: flex;
+    align-content: center;
 }
