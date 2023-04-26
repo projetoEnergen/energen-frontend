@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import {Box} from '@mui/material';
-import './DeletarTema.css';
+import './DeletarCategorias.css'
 import { useNavigate, useParams } from 'react-router-dom';
 import { getById, deleteId } from '../../../service/Service';
 import useLocalStorage from 'react-use-localstorage';
@@ -63,7 +63,7 @@ function DeletarCategoria() {
                 Deseja deletar a Categoria:
               </Typography>
               <Typography color="textSecondary">
-                {categoria.nome}
+                {categoria?.nome}
               </Typography>
             </Box>
           </CardContent>

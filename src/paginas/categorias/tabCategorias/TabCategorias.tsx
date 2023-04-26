@@ -5,7 +5,7 @@ import "./TabCategorias.css";
 import useLocalStorage from "react-use-localstorage";
 import { getAll } from "../../../service/Service";
 import { Categoria } from "../../../models/Categoria";
-import ListaCategorias from "../listaCategorias/ListaCategorias";
+import ListaProdutos from "../../produtos/listaProdutos/ListaProdutos";
 
 function TabCategorias() {
 
@@ -34,14 +34,14 @@ function TabCategorias() {
     <>
       <TabContext value={value}>
         <AppBar position="static" className="barra">
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
+          <Tabs centered indicatorColor="secondary" onChange={handleChange} >
             {categorias.map((categoria) => (
-                <Tab label={categoria.nome} value={categoria.nome} />
+                <Tab style={{padding:'1%'}} label={categoria.nome} value={categoria.id} />
             ))}
           </Tabs>
         </AppBar>
         <TabPanel value="1">
-        <ListaCategorias />
+         <ListaProdutos />
         </TabPanel>
       </TabContext>
     </>
