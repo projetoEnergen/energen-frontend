@@ -6,8 +6,12 @@ import Login from "./paginas/login/Login";
 import CadastroUsuario from "./paginas/cadastrousuario/CadastroUsuario";
 import Sobre from "./paginas/sobre/Sobre";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Produtos from "./paginas/produtos/paginaProdutos/Produtos";
+import CadastroCategorias from "./paginas/categorias/cadastroCategorias/CadastroCategorias";
+import DeletarCategorias from "./paginas/categorias/deletarCategorias/DeletarCategorias";
+import CadastroProdutos from "./paginas/produtos/cadastroProdutos/CadastroProdutos";
+import DeletarProdutos from "./paginas/produtos/deletarProdutos/DeletarProdutos";
 import "./App.css";
-import Produtos from "./paginas/produtos/Produtos";
 
 function App() {
   return (
@@ -21,7 +25,12 @@ function App() {
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/login" element={<Login />} />
           <Route path="/usuarios/cadastrar" element={<CadastroUsuario />} />
-
+          <Route path="/cadastroProdutos" element={<CadastroProdutos />} />
+          <Route path="/cadastroProdutos/:id" element={<CadastroProdutos />} />
+          <Route path="/cadastroCategorias" element={<CadastroCategorias />} />
+          <Route path="/cadastroCategorias/:id" element={<CadastroCategorias />} />
+          <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
+          <Route path="/deletarCategorias/:id" element={<DeletarCategorias />} />
         </Routes>
       </div>
       <Footer />

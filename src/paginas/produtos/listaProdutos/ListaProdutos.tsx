@@ -5,9 +5,9 @@ import useLocalStorage from 'react-use-localstorage'
 import { getAll } from '../../../service/Service'
 import { Produto } from '../../../models/Produto'
 
-function ListaProduto() {
+function ListaCategorias() {
 
-  const [produtos, setProdutos] = useState<Produto[]>([])
+  const [categorias, setCategorias] = useState<Produto[]>([])
 
   const [token, setToken] = useLocalStorage('token');
 
@@ -36,10 +36,7 @@ function ListaProduto() {
     {produtos.map(produto => (
       <Box m={2} >
       <Card variant="outlined">
-        <CardMedia
-          sx={{ height: 140 }}
-          image= {produto.foto}
-        />
+          <img src={produto.foto} alt="" />
         <CardContent>
           <Typography variant="h5" component="h2">
             {produto.nome}
