@@ -81,7 +81,7 @@ function CadastroUsuario() {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Grid item xs={6}></Grid>
+      <Grid item xs={6} className="imagem2"></Grid>
       <Grid item xs={6} alignItems={"center"}>
         <Box paddingX={10}>
           <form onSubmit={onSubmit}>
@@ -117,18 +117,6 @@ function CadastroUsuario() {
               fullWidth
             ></TextField>
             <TextField
-              type="password"
-              name="senha"
-              value={usuario.senha}
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                updateModel(event)
-              }
-              variant="outlined"
-              label="Senha"
-              margin="normal"
-              fullWidth
-            ></TextField>
-            <TextField
               variant="outlined"
               name="cpf"
               value={usuario.cpf}
@@ -158,6 +146,18 @@ function CadastroUsuario() {
                 updateModel(event)
               }
               label="Foto (URL)"
+              margin="normal"
+              fullWidth
+            ></TextField>
+            <TextField
+              type="password"
+              name="senha"
+              value={usuario.senha}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                updateModel(event)
+              }
+              variant="outlined"
+              label="Senha"
               margin="normal"
               fullWidth
             ></TextField>

@@ -20,3 +20,36 @@
     justify-content: center;
     align-items: center;
 }
+
+.imagemTroca{
+    background-color: blueviolet;
+    /* background-image: url('https://ik.imagekit.io/energen/ImagensDessa/4.png?updatedAt=1682032003305'); 
+    background-repeat: 'no-repeat';
+    background-position:'center';
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.center{
+    display: flex;
+}
+
+.margem{
+    margin: 5vh;
+    /* background-color: blue;  */
+}
+
+.margemButton{
+    padding: 2% 2% 4% 2%;
+    align-content: center;
+    /* background-color: blue; */
+}
+
+.margemButton button{
+    margin-left: 2%;
+}
+
+.tituloIcone {
+    padding-bottom: 3%;
+}
