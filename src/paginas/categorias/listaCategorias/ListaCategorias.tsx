@@ -11,7 +11,7 @@ import { Produto } from '../../../models/Produto';
 
 function ListaCategoria() {
   
-  const [categorias, setCategorias]= useState <Categoria[]>([])
+  const [categorias, setCategorias]= useState <Categoria>()
   
   const [token, setToken]= useLocalStorage('token');
   
@@ -41,7 +41,9 @@ function ListaCategoria() {
 
 return (
   <div>
-    
+    {categorias?.produto?.map((prod) => (
+        <p>{prod.nome}</p>
+    ))}
   </div>
  );
 }

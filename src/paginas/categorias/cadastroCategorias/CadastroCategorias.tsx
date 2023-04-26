@@ -17,7 +17,7 @@ function CadastroCategorias() {
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     nome: "",
-    produto: null
+    
   });
 
   useEffect(() => {

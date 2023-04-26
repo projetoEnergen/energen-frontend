@@ -1,13 +1,15 @@
 import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
-import { getAll } from '../../../service/Service'
+import { getAll, getById } from '../../../service/Service';
 import { Produto } from '../../../models/Produto'
 
-function ListaCategorias() {
+function ListaProdutos() {
 
-  const [categorias, setCategorias] = useState<Produto[]>([])
+  const [produtos, setProdutos] = useState<Produto[]>([])
+
+  const { id } = useParams<{id: string}>();
 
   const [token, setToken] = useLocalStorage('token');
 
@@ -19,17 +21,17 @@ function ListaCategorias() {
     }
   }, [])
 
-  async function getAllProdutos() {
-      await getAll('/produtos', setProdutos, {
-        headers: {
-          Authorization: token
-        }
-      })
+  async function getProdutoById(){
+    await getAll(`/produtos/${id}`, setProdutos, {
+      headers:{
+        Authorization: token
+      }
+    })
   }
 
-  useEffect(() => {
-    getAllProdutos()
-  }, [produtos.length])
+  useEffect(()=>{
+  getProdutoById()
+  },[produtos])
 
   return ( 
   <> 
@@ -55,14 +57,14 @@ function ListaCategorias() {
         <CardActions>
           <Box display="flex" justifyContent="center" mb={1.5}>
 
-            <Link to={''} className="text-decorator-none" >
+            <Link to={""} className="text-decorator-none" >
               <Box mx={1}>
                 <Button variant="contained" className="marginLeft" size='small' color="primary" >
                   atualizar
                 </Button>
               </Box>
             </Link>
-            <Link to={''} className="text-decorator-none">
+            <Link to={""} className="text-decorator-none">
               <Box mx={1}>
                 <Button variant="contained" size='small' color="secondary">
                   deletar
@@ -78,4 +80,4 @@ function ListaCategorias() {
   )
 }
 
-export default ListaProduto
+export default ListaProdutos

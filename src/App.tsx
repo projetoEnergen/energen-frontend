@@ -12,6 +12,7 @@ import DeletarCategorias from "./paginas/categorias/deletarCategorias/DeletarCat
 import CadastroProdutos from "./paginas/produtos/cadastroProdutos/CadastroProdutos";
 import DeletarProdutos from "./paginas/produtos/deletarProdutos/DeletarProdutos";
 import "./App.css";
+import ListaCategoria from "./paginas/categorias/listaCategorias/ListaCategorias";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/produtos" element={<Produtos />} />
+          <Route path="/categorias" element={<ListaCategoria />} />
           <Route path="/login" element={<Login />} />
           <Route path="/usuarios/cadastrar" element={<CadastroUsuario />} />
           <Route path="/cadastroProdutos" element={<CadastroProdutos />} />
