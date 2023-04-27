@@ -1,13 +1,14 @@
-import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia } from '@mui/material'
+import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 import { getAll } from '../../../service/Service'
 import { Produto } from '../../../models/Produto'
+import './ListaProdutos.css'
 
-function ListaCategorias() {
+function ListaProduto() {
 
-  const [categorias, setCategorias] = useState<Produto[]>([])
+  const [produtos, setProdutos] = useState<Produto[]>([])
 
   const [token, setToken] = useLocalStorage('token');
 
@@ -32,11 +33,11 @@ function ListaCategorias() {
   }, [produtos.length])
 
   return ( 
-  <> 
+  <Grid className='caixa' xs={12}>
     {produtos.map(produto => (
-      <Box m={2} >
-      <Card variant="outlined">
-          <img src={produto.foto} alt="" />
+      <Grid xs={4}>
+      <Card variant="outlined" className='card-produto'>
+          <img className='imagem-produto' src={produto.foto} alt="" />
         <CardContent>
           <Typography variant="h5" component="h2">
             {produto.nome}
@@ -55,14 +56,14 @@ function ListaCategorias() {
         <CardActions>
           <Box display="flex" justifyContent="center" mb={1.5}>
 
-            <Link to={''} className="text-decorator-none" >
+            <Link to={`/atualizarProdutos/${produto.id}`} className="text-decorator-none" >
               <Box mx={1}>
                 <Button variant="contained" className="marginLeft" size='small' color="primary" >
                   atualizar
                 </Button>
               </Box>
-            </Link>
-            <Link to={''} className="text-decorator-none">
+            </Link> 
+            <Link to={`/deletarProdutos/${produto.id}`} className="text-decorator-none">
               <Box mx={1}>
                 <Button variant="contained" size='small' color="secondary">
                   deletar
@@ -72,9 +73,9 @@ function ListaCategorias() {
           </Box>
         </CardActions>
       </Card>
-    </Box>
+    </Grid>
     ))}  
-  </>
+  </Grid>
   )
 }
 

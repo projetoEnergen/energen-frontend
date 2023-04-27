@@ -4,9 +4,9 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import {Typography} from "@material-ui/core";
 import {Grid} from "@mui/material";
-import Box from "@mui/material/Box";
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -23,11 +23,9 @@ function Footer() {
 
             <Grid item xs={8} display={'flex'} className="center" >
             
-            <Grid item xs={4} color={'white'} >
-            <Typography variant="subtitle2">Sobre</Typography>
-            <Typography variant="subtitle2">Produtos</Typography>
-            <Typography variant="subtitle2">Trocas</Typography>
-        
+            <Grid item xs={4} color={'white'}>
+              <Link to={'/cadastroProdutos'}><Typography className="link-footer" variant="subtitle2">Cadastrar Produto</Typography></Link>
+              <Link to={'/cadastroCategorias'}><Typography className="link-footer" variant="subtitle2">Cadastar Categoria</Typography></Link>
             </Grid>
 
             <Grid item xs={4}color={'white'}>

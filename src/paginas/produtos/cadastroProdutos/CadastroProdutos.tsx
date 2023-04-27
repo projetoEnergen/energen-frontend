@@ -28,7 +28,6 @@ function Cadastroprodutos() {
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     nome: "",
-    produto: null
   });
 
   const [produto, setProduto] = useState<Produto>({
@@ -39,7 +38,6 @@ function Cadastroprodutos() {
     preco: 0,
     qtd_estoque: 0,
     foto: "",
-    categoria: null
   });
 
   const [usuario, setUsuario] = useState<Usuario>({
@@ -60,13 +58,13 @@ function Cadastroprodutos() {
   }, [categoria]);
 
   useEffect(() => {
-    getTemas();
+    getCategorias();
     if (id !== undefined) {
-      findByIdPostagem(id);
+      findByIdProduto(id);
     }
   }, [id]);
 
-  async function getTemas() {
+  async function getCategorias() {
     await getAll("/categorias", setCategorias, {
       headers: {
         Authorization: token,
@@ -74,7 +72,7 @@ function Cadastroprodutos() {
     });
   }
 
-  async function findByIdPostagem(id: string) {
+  async function findByIdProduto(id: string) {
     await getById(`produtos/${id}`, setProduto, {
       headers: {
         Authorization: token,
@@ -125,7 +123,7 @@ function Cadastroprodutos() {
     >
         <form onSubmit={onSubmit}>
           <Typography variant="h3" component="h1" align="center">
-            Formulário de cadastro postagem
+          {produto.id === 0 ? 'Cadastrar Produto' : 'Atualizar Produto'}
           </Typography>
           <TextField
             value={produto.nome}
@@ -181,12 +179,13 @@ function Cadastroprodutos() {
             fullWidth
           />
           <FormControl>
-            <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+            <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
             <Select
+              className='select-categoria'
               labelId="demo-simple-select-helper-label"
               id="demo-simple-select-helper"
               onChange={(e) =>
-                getById(`/temas/${e.target.value}`, setCategoria, {
+                getById(`/categorias/${e.target.value}`, setCategoria, {
                   headers: {
                     Authorization: token,
                   },
@@ -204,7 +203,7 @@ function Cadastroprodutos() {
               color="primary"
               disabled= {categoria.id === 0}
             >
-              {categoria.id === 0 ? 'Selecione uma categoria' : 'Cadastrar'}
+              {categoria.id === 0 ? 'Selecione uma categoria' : 'Atualizar'}
             </Button>
           </FormControl>
         </form>

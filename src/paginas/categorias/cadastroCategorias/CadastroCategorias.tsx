@@ -17,7 +17,6 @@ function CadastroCategorias() {
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     nome: "",
-    produto: null
   });
 
   useEffect(() => {
@@ -72,7 +71,7 @@ function CadastroCategorias() {
   }
 
   function back() {
-    history("/categorias");
+    history("/produtos");
   }
 
   return (
