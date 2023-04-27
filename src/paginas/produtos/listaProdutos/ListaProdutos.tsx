@@ -1,15 +1,16 @@
 import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
-import { getAll } from '../../../service/Service'
+import { getAll, getById } from '../../../service/Service';
 import { Produto } from '../../../models/Produto'
 import './ListaProdutos.css'
+
 
 function ListaProduto() {
 
   const [produtos, setProdutos] = useState<Produto[]>([])
-
+  
   const [token, setToken] = useLocalStorage('token');
 
   const history = useNavigate();
@@ -20,17 +21,17 @@ function ListaProduto() {
     }
   }, [])
 
-  async function getAllProdutos() {
-      await getAll('/produtos', setProdutos, {
-        headers: {
-          Authorization: token
-        }
-      })
+  async function getProdutoById(){
+    await getAll(`/produtos/${id}`, setProdutos, {
+      headers:{
+        Authorization: token
+      }
+    })
   }
 
-  useEffect(() => {
-    getAllProdutos()
-  }, [produtos.length])
+  useEffect(()=>{
+  getProdutoById()
+  },[produtos])
 
   return ( 
   <Grid className='caixa' xs={12}>
@@ -79,4 +80,4 @@ function ListaProduto() {
   )
 }
 
-export default ListaProduto
+export default ListaProdutos

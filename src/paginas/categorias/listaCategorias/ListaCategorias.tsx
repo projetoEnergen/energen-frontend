@@ -8,7 +8,7 @@ import { Grid, Card, CardContent, Typography, CardActions, Box, Button } from '@
 
 function ListaCategoria() {
   
-  const [categorias, setCategorias]= useState <Categoria[]>([])
+  const [categorias, setCategorias]= useState <Categoria>()
   
   const [token, setToken]= useLocalStorage('token');
   

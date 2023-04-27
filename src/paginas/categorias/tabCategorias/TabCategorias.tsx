@@ -35,14 +35,15 @@ function TabCategorias() {
     <>
       <TabContext value={value}>
         <AppBar position="static" className="barra">
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
+          <Tabs centered indicatorColor="secondary" onChange={handleChange} >
             {categorias.map((categoria) => (
-                <Tab style={{padding:'0 1%'}} label={categoria.nome} value={categoria.id} />
+            
+              <Tab style={{padding:'0 1%'}} label={categoria.nome} value={categoria.id} />
             ))}
           </Tabs>
         </AppBar>
         <TabPanel value='1'>
-          <ListaProdutos />
+          <ListaProdutos />  
         </TabPanel>
       </TabContext>
     </>

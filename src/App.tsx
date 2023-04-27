@@ -13,6 +13,7 @@ import CadastroProdutos from "./paginas/produtos/cadastroProdutos/CadastroProdut
 import DeletarProdutos from "./paginas/produtos/deletarProdutos/DeletarProdutos";
 import ListaCategorias from "./paginas/categorias/listaCategorias/ListaCategorias";
 import "./App.css";
+import ListaCategoria from "./paginas/categorias/listaCategorias/ListaCategorias";
 
 function App() {
   return (
