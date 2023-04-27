@@ -4,8 +4,7 @@
 }
 
 .login {
-    color: white;
-    text-decoration: none;
+    color: white !important;
 }
 
 .menu{

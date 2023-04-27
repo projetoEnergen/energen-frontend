@@ -1,4 +1,11 @@
-import { Container, Typography, TextField, Button } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Box,
+  Grid,
+} from "@material-ui/core";
 import "./CadastroCategorias.css";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,7 +14,6 @@ import { Categoria } from "../../../models/Categoria";
 import { getById, put, post } from "../../../service/Service";
 
 function CadastroCategorias() {
-
   const history = useNavigate();
 
   const { id } = useParams<{ id: string }>();
@@ -75,31 +81,51 @@ function CadastroCategorias() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h3"
-          color="textSecondary"
-          component="h1"
-          align="center"
-        >
-          Cadastro de Categoria
-        </Typography>
-        <TextField
-          value={categoria.nome}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-          id="nome"
-          label="nome"
-          variant="outlined"
-          name="nome"
-          margin="normal"
-          fullWidth
-        />
-        <Button type="submit" variant="contained" color="primary">
-          Finalizar
-        </Button>
-      </form>
-    </Container>
+    <Grid
+      container
+      justifyContent={"center"}
+      alignItems={"center"}
+      className="fundo-cadastro-categoria"
+      sm={12}
+    >
+      <Grid item xs={6} className="imagem-cadastro-categoria"></Grid>
+      <Grid item xs={6} alignItems={"center"}>
+        <Box paddingX={10}>
+          <form className="form-cadastro-categoria" onSubmit={onSubmit}>
+            <Typography
+              variant="h3"
+              color="textSecondary"
+              component="h1"
+              align="center"
+              className="texto-cadastro-categoria"
+            >
+              Cadastro de Categoria
+            </Typography>
+            <TextField
+              value={categoria.nome}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                updatedCategoria(e)
+              }
+              id="nome"
+              label="nome"
+              variant="outlined"
+              name="nome"
+              margin="normal"
+              fullWidth
+            />
+            <Box marginTop={2} textAlign={"center"}>
+              <Button
+                className="button-cadastro-categoria texto-cadastro-categoria"
+                type="submit"
+                variant="contained"
+              >
+                Finalizar
+              </Button>
+            </Box>
+          </form>
+        </Box>
+      </Grid>
+    </Grid>
   );
 }
 

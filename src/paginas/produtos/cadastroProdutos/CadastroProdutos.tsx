@@ -1,4 +1,4 @@
-import { Grid, Typography, TextField, FormControl, InputLabel, Select, MenuItem, FormHelperText, Button } from '@mui/material';
+import { Grid, Typography, TextField, FormControl, InputLabel, Select, MenuItem, FormHelperText, Button, Box } from '@mui/material';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Usuario } from '../../../models/Usuario';
@@ -118,11 +118,14 @@ function Cadastroprodutos() {
       container
       justifyContent={"center"}
       alignItems={"center"}
-      style={{padding:'2vw'}}
+      className='fundo-cadastro-produto'
       sm={12}
     >
-        <form onSubmit={onSubmit}>
-          <Typography variant="h3" component="h1" align="center">
+      <Grid item xs={6} className="imagem-cadastro-produto"></Grid>
+      <Grid item xs={6} alignItems={"center"}>
+      <Box paddingX={10}>
+        <form className='form-cadastro-produto' onSubmit={onSubmit}>
+          <Typography variant="h3" className='texto-cadastro-produto' component="h1" align="center">
           {produto.id === 0 ? 'Cadastrar Produto' : 'Atualizar Produto'}
           </Typography>
           <TextField
@@ -197,7 +200,7 @@ function Cadastroprodutos() {
               ))}
             </Select>
             <Button
-              className="button-finalizar"
+              className='button-cadastro-produto texto-cadastro-produto'
               type="submit"
               variant="contained"
               color="primary"
@@ -207,6 +210,8 @@ function Cadastroprodutos() {
             </Button>
           </FormControl>
         </form>
+       </Box>
+      </Grid>
     </Grid>
   );
 }

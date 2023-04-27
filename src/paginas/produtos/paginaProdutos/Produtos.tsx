@@ -1,14 +1,13 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Box } from '@mui/material';
 import './Produtos.css'
 import TabCategorias from '../../categorias/tabCategorias/TabCategorias';
+import Carousel from '../../../componentes/estaticos/carousel/Carousel';
 
 function Produtos() {
     return (
       <Grid container xs={12} justifyContent={'center'} >
-        <Grid  textAlign={'center'} margin={'2vh'}>
-          <img src="https://ik.imagekit.io/energen/Home/60_.png?updatedAt=1681932495224" alt=""  height= {'400vh'} background-size={'cover'}/>
-        </Grid>
+        <Carousel />
         <Grid xs={12} className='container'>
           <TabCategorias />
         </Grid>

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <Grid className="left" spacing={0} container item xs={12} style={{backgroundColor:'#1FE291', height:'15vh'}}  >
+      <Grid className="left" spacing={0} container item xs={12} style={{backgroundColor:'#1FE291'}}  >
             <Grid style={{backgroundColor:'#1FE291', padding:'3vh'}} item xs={2}><img className="logoFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LogoFooter.png?updatedAt=1681508432602" alt="logo texto"/ >
             <Grid>
                           <EmailSharpIcon style={{color:'white'}}></EmailSharpIcon>

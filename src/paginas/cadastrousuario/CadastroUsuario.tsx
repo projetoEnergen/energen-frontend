@@ -80,17 +80,18 @@ function CadastroUsuario() {
       direction="row"
       justifyContent={"center"}
       alignItems={"center"}
+      className="fundo-cadastro"
     >
-      <Grid item xs={6} className="imagem2"></Grid>
+      <Grid item xs={6} className="imagem-cadastro"></Grid>
       <Grid item xs={6} alignItems={"center"}>
         <Box paddingX={10}>
-          <form onSubmit={onSubmit}>
+          <form className="form-cadastro" onSubmit={onSubmit}>
             <Typography
               variant="h3"
               gutterBottom
               component="h3"
               align="center"
-              style={{ fontWeight: "bold", color: "#283593" }}
+              className="texto-cadastro"
             >
               Cadastrar
             </Typography>
@@ -177,11 +178,11 @@ function CadastroUsuario() {
               <Button
                 onClick={back}
                 variant="contained"
-                style={{ marginRight: "10px" }}
+                className="button-cadastro texto-cadastro"
               >
                 Cancelar
               </Button>
-              <Button type="submit" variant="contained">
+              <Button type="submit" className="button-cadastro" variant="contained">
                 Cadastar
               </Button>
             </Box>

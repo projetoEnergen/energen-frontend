@@ -110,7 +110,7 @@ function Navbar() {
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase placeholder="Busca em EnerGen" inputProps={{ "aria-label": "search" }}/>      
+              <StyledInputBase className="login" placeholder="Busca em EnerGen" inputProps={{ "aria-label": "search" }}/>      
             </Search> 
             <AddShoppingCartIcon />
           </Box>
