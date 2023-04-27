@@ -11,6 +11,7 @@ import CadastroCategorias from "./paginas/categorias/cadastroCategorias/Cadastro
 import DeletarCategorias from "./paginas/categorias/deletarCategorias/DeletarCategorias";
 import CadastroProdutos from "./paginas/produtos/cadastroProdutos/CadastroProdutos";
 import DeletarProdutos from "./paginas/produtos/deletarProdutos/DeletarProdutos";
+import ListaCategorias from "./paginas/categorias/listaCategorias/ListaCategorias";
 import "./App.css";
 import ListaCategoria from "./paginas/categorias/listaCategorias/ListaCategorias";
 
@@ -24,13 +25,13 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/produtos" element={<Produtos />} />
-          <Route path="/categorias" element={<ListaCategoria />} />
+          <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/login" element={<Login />} />
           <Route path="/usuarios/cadastrar" element={<CadastroUsuario />} />
           <Route path="/cadastroProdutos" element={<CadastroProdutos />} />
-          <Route path="/cadastroProdutos/:id" element={<CadastroProdutos />} />
+          <Route path="/atualizarProdutos/:id" element={<CadastroProdutos />} />
           <Route path="/cadastroCategorias" element={<CadastroCategorias />} />
-          <Route path="/cadastroCategorias/:id" element={<CadastroCategorias />} />
+          <Route path="/atualizarCategorias/:id" element={<CadastroCategorias />} />
           <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
           <Route path="/deletarCategorias/:id" element={<DeletarCategorias />} />
         </Routes>

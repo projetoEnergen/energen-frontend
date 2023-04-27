@@ -3,7 +3,7 @@ import { AppBar, Tabs, Tab, Box, Typography, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./TabCategorias.css";
 import useLocalStorage from "react-use-localstorage";
-import { getAll } from "../../../service/Service";
+import { getAll, post } from '../../../service/Service';
 import { Categoria } from "../../../models/Categoria";
 import ListaProdutos from "../../produtos/listaProdutos/ListaProdutos";
 
@@ -26,6 +26,7 @@ function TabCategorias() {
   }, [categorias.length]);
 
   const [value, setValue] = useState("1");
+
   function handleChange(event: React.ChangeEvent<{}>, newValue: string) {
     setValue(newValue);
   }
@@ -36,12 +37,13 @@ function TabCategorias() {
         <AppBar position="static" className="barra">
           <Tabs centered indicatorColor="secondary" onChange={handleChange} >
             {categorias.map((categoria) => (
-                <Tab style={{padding:'1%'}} label={categoria.nome} value={categoria.id} />
+            
+              <Tab style={{padding:'0 1%'}} label={categoria.nome} value={categoria.id} />
             ))}
           </Tabs>
         </AppBar>
-        <TabPanel value="1">
-         <ListaProdutos />
+        <TabPanel value='1'>
+          <ListaProdutos />  
         </TabPanel>
       </TabContext>
     </>

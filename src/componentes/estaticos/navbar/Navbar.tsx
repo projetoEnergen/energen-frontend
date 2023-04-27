@@ -100,6 +100,11 @@ function Navbar() {
             <Typography variant="h6" color={"inherit"}>Produtos</Typography>
             </Link>
             </Box>
+            <Box mx={1} style={{ cursor: "pointer" }}>
+            <Link className="login" to='/categorias'>
+            <Typography variant="h6" color={"inherit"}>Categorias</Typography>
+            </Link>
+            </Box>
             <Box display={'flex'} alignItems={'center'} gap={3}>
             <Search >
               <SearchIconWrapper>

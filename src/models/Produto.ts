@@ -8,5 +8,5 @@ export interface Produto {
     preco: number;
     qtd_estoque: number;
     foto: string;
-    categoria?: Categoria ;
+    categoria?: Categoria;
 }
