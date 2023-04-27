@@ -7,11 +7,13 @@ import { Produto } from '../../../models/Produto'
 import './ListaProdutos.css'
 
 
-function ListaProduto() {
+function ListaProdutos() {
 
   const [produtos, setProdutos] = useState<Produto[]>([])
   
   const [token, setToken] = useLocalStorage('token');
+
+  const { id } = useParams<{ id: string }>();
 
   const history = useNavigate();
 
@@ -80,4 +82,4 @@ function ListaProduto() {
   )
 }
 
-export default ListaProdutos
+export default ListaProdutos;
