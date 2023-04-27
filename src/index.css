@@ -1,15 +1,15 @@
-:root {
-    --green-energen: #1FE291;
-    --green-light:   #99FFB9;
-    --green-dark:    #06B566;
-    --blue-light:    #3EABC9;
-    --yellow-light:  #FFFF3F;
-    --orange-light:  #FF8038;
-  }
-
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+:root {
+  --green-energen: #1FE291;
+  --green-light:   #99FFB9;
+  --green-dark:    #06B566;
+  --blue-light:    #3EABC9;
+  --yellow-light:  #FFFF3F;
+  --orange-light:  #FF8038;
 }
