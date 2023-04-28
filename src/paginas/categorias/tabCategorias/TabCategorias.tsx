@@ -2,17 +2,20 @@ import { TabContext, TabPanel } from "@material-ui/lab";
 import { AppBar, Tabs, Tab, Box, Typography, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./TabCategorias.css";
-import useLocalStorage from "react-use-localstorage";
 import { getAll, post } from '../../../service/Service';
 import { Categoria } from "../../../models/Categoria";
 import ListaProdutos from "../../produtos/listaProdutos/ListaProdutos";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
 
 function TabCategorias() {
 
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
 
   async function getAllCategorias() {
     await getAll("/categorias", setCategorias, {

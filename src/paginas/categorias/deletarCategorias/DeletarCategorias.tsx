@@ -4,24 +4,30 @@ import {Box} from '@mui/material'
 import './DeletarCategorias.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getById, deleteId } from '../../../service/Service';
-import useLocalStorage from 'react-use-localstorage';
 import { Categoria } from '../../../models/Categoria';
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import { addToken } from '../../../store/tokens/Action';
 
 function DeletarCategoria() {
 
   const history = useNavigate();
 
+  const dispatch = useDispatch();
+
   const { id } = useParams<{id: string}>();
 
-  const [token, setToken]= useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
   
   const [categoria, setCategoria] = useState<Categoria>();
 
   useEffect(() => {
       if (token == "") {
+          dispatch(addToken(''));
           alert("Você precisa estar logado")
           history("/login")
-  
       }
   }, [token])
 
