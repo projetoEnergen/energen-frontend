@@ -23,8 +23,8 @@ function ListaProdutos() {
     }
   }, [])
 
-  async function getProdutoById(){
-    await getAll(`/produtos/${id}`, setProdutos, {
+  async function getProduto(){
+    await getAll('/produtos', setProdutos, {
       headers:{
         Authorization: token
       }
@@ -32,7 +32,7 @@ function ListaProdutos() {
   }
 
   useEffect(()=>{
-  getProdutoById()
+  getProduto()
   },[produtos])
 
   return ( 
@@ -54,7 +54,6 @@ function ListaProdutos() {
           <Typography variant="body2" component="p">
            {produto.preco}
           </Typography>
-          <img src="" alt="" />
         </CardContent>
         <CardActions>
           <Box display="flex" justifyContent="center" mb={1.5}>

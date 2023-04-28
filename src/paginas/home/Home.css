@@ -22,10 +22,8 @@
 }
 
 .imagem-troca{
-    background-image: url('https://ik.imagekit.io/energen/ImagensDessa/ezgif.com-webp-to-png.png?updatedAt=1682633452485'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 40vh;
+   width: 100%;
+   object-fit: fill;
 }
 
 .margemButton{
@@ -46,6 +44,7 @@
     margin: 5% 5% 0 5%;
     display: flex;
     gap: 2%;
+    align-items: center;
 }
 
 .texto-sobre {

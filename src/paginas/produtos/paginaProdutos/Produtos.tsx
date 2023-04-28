@@ -3,6 +3,7 @@ import { Grid, Box } from '@mui/material';
 import './Produtos.css'
 import TabCategorias from '../../categorias/tabCategorias/TabCategorias';
 import Carousel from '../../../componentes/estaticos/carousel/Carousel';
+import ListaProdutos from '../listaProdutos/ListaProdutos';
 
 function Produtos() {
     return (
@@ -10,6 +11,7 @@ function Produtos() {
         <Carousel />
         <Grid xs={12} className='container'>
           <TabCategorias />
+          <ListaProdutos />
         </Grid>
       </Grid>
     );

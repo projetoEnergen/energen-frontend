@@ -6,6 +6,7 @@ import useLocalStorage from "react-use-localstorage";
 import { getAll, post } from '../../../service/Service';
 import { Categoria } from "../../../models/Categoria";
 import ListaProdutos from "../../produtos/listaProdutos/ListaProdutos";
+import { Link } from "react-router-dom";
 
 function TabCategorias() {
 
@@ -37,14 +38,13 @@ function TabCategorias() {
         <AppBar position="static" className="barra">
           <Tabs centered indicatorColor="secondary" onChange={handleChange} >
             {categorias.map((categoria) => (
-            
-              <Tab style={{padding:'0 1%'}} label={categoria.nome} value={categoria.id} />
+              <Link style={{padding:'0 1%', color:'white', fontWeight:'bold'}} to={`/categorias/${categoria.id}`}>
+                <Tab  label={categoria.nome} value={categoria.id} />
+              </Link>
             ))}
           </Tabs>
         </AppBar>
-        <TabPanel value='1'>
-          <ListaProdutos />  
-        </TabPanel>
+       
       </TabContext>
     </>
   );
