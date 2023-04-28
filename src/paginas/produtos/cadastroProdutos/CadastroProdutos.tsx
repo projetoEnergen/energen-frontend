@@ -9,6 +9,7 @@ import "./CadastroProdutos.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { addToken } from '../../../store/tokens/Action';
+import { toast } from 'react-toastify';
 
 function Cadastroprodutos() {
   
@@ -27,7 +28,16 @@ function Cadastroprodutos() {
   useEffect(() => {
     if (token == "") {
       dispatch(addToken(''));
-      alert("Você precisa estar logado");
+      toast.info('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       history("/login");
     }
   }, [token]);
@@ -87,7 +97,7 @@ function Cadastroprodutos() {
     });
   }
 
-  function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
+  function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
     setProduto({
       ...produto,
       [e.target.name]: e.target.value,
@@ -104,14 +114,32 @@ function Cadastroprodutos() {
           Authorization: token,
         },
       });
-      alert("Produto atualizado com sucesso");
+      toast.success('Produto atualizado com sucesso!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     } else {
       post('/produtos', produto, setProduto, {
         headers: {
           Authorization: token,
         },
       });
-      alert("Produto cadastrado com sucesso");
+      toast.success('Produto cadastrado com sucesso!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }
     back();
   }
@@ -137,7 +165,7 @@ function Cadastroprodutos() {
           </Typography>
           <TextField
             value={produto.nome}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
             id="nome"
             label="Nome"
             variant="outlined"
@@ -148,7 +176,7 @@ function Cadastroprodutos() {
           />
           <TextField
             value={produto.marca}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
             id="marca"
             label="Marca"
             name="marca"
@@ -158,7 +186,7 @@ function Cadastroprodutos() {
           />
           <TextField
             value={produto.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
             id="descricao"
             label="Descrição"
             name="descricao"
@@ -170,7 +198,7 @@ function Cadastroprodutos() {
           />
            <TextField
             value={produto.preco}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
             id="preco"
             label="Preço em R$"
             variant="outlined"
@@ -180,7 +208,7 @@ function Cadastroprodutos() {
           />
            <TextField
             value={produto.foto}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
             id="foto"
             label="Foto"
             variant="outlined"
