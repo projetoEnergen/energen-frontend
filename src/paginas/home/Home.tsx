@@ -31,7 +31,9 @@ function Home() {
                 entrega do seu produto novo e mais sustentável.
               </Typography>
             </Grid>
-            <Grid item xs={6} className="imagem-troca"></Grid>
+            <Grid item xs={6}>
+              <img  className="imagem-troca" src="https://ik.imagekit.io/energen/ImagensDessa/ezgif.com-webp-to-png.png?updatedAt=1682633452485" alt="" />
+            </Grid>
           </Grid>
           <Box className="margemButton">
             <Button variant="contained">

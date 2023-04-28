@@ -25,7 +25,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/produtos" element={<Produtos />} />
-          <Route path="/categorias" element={<ListaCategorias />} />
+          <Route path="/categorias/:id" element={<ListaCategorias />} />
           <Route path="/login" element={<Login />} />
           <Route path="/usuarios/cadastrar" element={<CadastroUsuario />} />
           <Route path="/cadastroProdutos" element={<CadastroProdutos />} />
