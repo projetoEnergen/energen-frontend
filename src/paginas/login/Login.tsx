@@ -6,6 +6,7 @@ import { login } from "../../service/Service";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/Action";
+import { toast } from "react-toastify";
 
 function Login() {
   const history = useNavigate();
@@ -33,15 +34,34 @@ function Login() {
     event.preventDefault();
     try {
       await login("/usuarios/logar", userLogin, setToken);
-      alert("Usuario logado com sucesso");
+      toast.success('Usuario logado com sucesso!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     } catch (error) {
       console.log(error);
-      alert("Usuário ou senha inválidos");
+      toast.error('Usuário ou senha inválido!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }
   }
 
   useEffect(() => {
     if (token !== "") {
+      console.log(token)
       dispatch(addToken(token));
       history("/home");
     }

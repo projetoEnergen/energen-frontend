@@ -14,6 +14,7 @@ import { getById, put, post } from "../../../service/Service";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { addToken } from "../../../store/tokens/Action";
+import { toast } from "react-toastify";
 
 function CadastroCategorias() {
   
@@ -35,7 +36,16 @@ function CadastroCategorias() {
   useEffect(() => {
     if (token == "") {
       dispatch(addToken(''));
-      alert("Você precisa efetuar o Login");
+      toast.info('Você precisa efetuar o Login!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       history("/login");
     }
   }, [token]);
@@ -72,14 +82,32 @@ function CadastroCategorias() {
           Authorization: token,
         },
       });
-      alert("Categoria atualizada com sucesso");
+      toast.success('Categoria atualizada com sucesso!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     } else {
       post(`/categorias`, categoria, setCategoria, {
         headers: {
           Authorization: token,
         },
       });
-      alert("Categoria cadastrada com sucesso");
+      toast.success('Categoria cadastrada com sucesso!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }
     back();
   }

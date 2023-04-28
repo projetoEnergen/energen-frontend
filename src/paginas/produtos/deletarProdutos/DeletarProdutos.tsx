@@ -7,6 +7,7 @@ import "./DeletarProdutos.css"
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { addToken } from "../../../store/tokens/Action";
+import { toast } from "react-toastify";
 
 function deletarProdutos() {
 
@@ -25,7 +26,16 @@ function deletarProdutos() {
   useEffect(() => {
     if (token == "") {
       dispatch(addToken(''));
-      alert("Você precisa estar logado");
+      toast.info('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       history("/login");
     }
   }, [token]);
@@ -51,7 +61,16 @@ function deletarProdutos() {
         Authorization: token,
       },
     });
-    alert("Produto deletado com sucesso");
+    toast.success('Produto deletado com sucesso!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
   }
 
   function nao() {
