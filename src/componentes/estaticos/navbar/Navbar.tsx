@@ -9,12 +9,18 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PersonIcon from "@mui/icons-material/Person";
 import "./Navbar.css";
+import useLocalStorage from "react-use-localstorage";
 
 function Navbar() {
+
+  const history = useNavigate();
+
+  const [token, setToken] = useLocalStorage("token");
+
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -56,6 +62,13 @@ function Navbar() {
       },
     },
   }));
+
+  function goLogout(){
+    setToken('')
+    alert('Usuário Deslogado')
+    history('/login')
+  }
+
   return (
     <>
       <AppBar position="static" className="menu">
@@ -71,7 +84,7 @@ function Navbar() {
               alt="logo EnerGen"
             />
           </Box>
-          <Box display={"flex"} justifyContent={'space-around'} width={'70%'} flex={2}>
+          <Box className ='alinhamento'display={"flex"} justifyContent={'space-around'} alignItems={'center'} width={'70%'} flex={2}>
             <Box mx={1} style={{ cursor: "pointer" }}>
             <Link className="login" to='/home'>
               <Typography variant="h6">Home</Typography>
@@ -87,22 +100,29 @@ function Navbar() {
             <Typography variant="h6" color={"inherit"}>Produtos</Typography>
             </Link>
             </Box>
-            <Box>
-            <Search>
+            <Box mx={1} style={{ cursor: "pointer" }}>
+            <Link className="login" to='/categorias'>
+            <Typography variant="h6" color={"inherit"}>Categorias</Typography>
+            </Link>
+            </Box>
+            <Box display={'flex'} alignItems={'center'} gap={3}>
+            <Search >
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Busca em EnerGen"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
+              <StyledInputBase className="login" placeholder="Busca em EnerGen" inputProps={{ "aria-label": "search" }}/>      
+            </Search> 
+            <AddShoppingCartIcon />
           </Box>
+
           </Box>
+
           <Box display={'flex'} alignItems={'center'} paddingLeft={2}>
             <PersonIcon></PersonIcon>
-            <AddShoppingCartIcon />
-            <Link className="login" to='/login'>Login</Link>
+          </Box>
+            
+          <Box display={'flex'} alignItems={'center'} paddingLeft={2} onClick={goLogout}>
+            <Link className="login" to='/login'>Logout</Link>
           </Box>
         </Box>
       </AppBar>

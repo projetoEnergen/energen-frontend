@@ -18,6 +18,7 @@
     "@mui/material": "5.0.6",
     "axios": "^0.21.4",
     "react": "^17",
+    "react-alice-carousel": "^2.7.1",
     "react-dom": "^17",
     "react-router-dom": "6",
     "react-use-localstorage": "^3.5.3"

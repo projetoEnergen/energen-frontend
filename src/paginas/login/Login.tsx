@@ -50,16 +50,17 @@ function Login() {
       direction="row"
       justifyContent={"center"}
       alignItems={"center"}
+      className="fundo-login"
     >
       <Grid alignItems={"center"} xs={6}>
         <Box paddingX={20}>
-          <form onSubmit={onSubmit}>
+          <form className="form-login" onSubmit={onSubmit}>
             <Typography
               variant="h3"
               gutterBottom
               component="h3"
               align="center"
-              style={{ fontWeight: "bold", color:'#ff5722'}}
+              className="texto-login"
             >
               Entrar
             </Typography>
@@ -87,7 +88,7 @@ function Login() {
               fullWidth
             ></TextField>
             <Box marginTop={2} textAlign={"center"}>
-              <Button className="buttonlogin" type="submit" variant="contained" fullWidth>
+              <Button className="button-login texto-login" type="submit" variant="contained" fullWidth>
                 Logar
               </Button>
             </Box>
@@ -96,7 +97,7 @@ function Login() {
             <Box marginRight={1}>
               <Typography marginTop={2} align="center" variant="body1">
                 Ainda não tem uma conta?{" "}
-                <Link to="/usuarios/cadastrar" style={{color:'#ef5350', font:'bold'}}>
+                <Link to="/usuarios/cadastrar" className="texto-login">
                   Cadastre-se aqui
                 </Link>
               </Typography>
@@ -104,7 +105,7 @@ function Login() {
           </Box>
         </Box>
       </Grid>
-      <Grid xs={6} className="imagem"></Grid>
+      <Grid xs={6} className="imagem-login"></Grid>
     </Grid>
   );
 }

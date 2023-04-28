@@ -1,8 +1,7 @@
 .imagemBanner{
     background-image: url('https://ik.imagekit.io/energen/Banner/bannerDessaRedimensionado-14.png?updatedAt=1682008231610');
-
     background-position:'center';
-    min-height: 80vh;
+    min-height: 90vh;
     min-width: 120vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,10 +12,46 @@
     width: 10vh;
     padding: 10px;
 }
+
 .alinha{
     display: flex;
     gap: 3%;
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+
+.imagem-troca{
+    background-image: url('https://ik.imagekit.io/energen/ImagensDessa/ezgif.com-webp-to-png.png?updatedAt=1682633452485'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+}
+
+.margemButton{
+    padding: 4% 0;
+    align-content: center;
+    text-align: center;
+}
+
+.margemButton button{
+    margin-left: 2%;
+}
+
+.tituloIcone {
+    padding-bottom: 3%;
+}
+
+.caixa-troca {
+    margin: 5% 5% 0 5%;
+    display: flex;
+    gap: 2%;
+}
+
+.texto-sobre {
+    text-align: center;
+}
+
+.topo-home {
+    margin-top: 4%;
 }

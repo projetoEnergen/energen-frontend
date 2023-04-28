@@ -1,27 +1,27 @@
-.imagem-login {
+.imagem-cadastro-categoria {
     background-image: url('https://ik.imagekit.io/energen/Banner/banner_verde_claro-15.png?updatedAt=1682622718120');
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
 }
 
-.form-login {
+.form-cadastro-categoria {
     background-color: #ffffff;
     margin:10%;
     border-radius: 5%;
     padding: 5%;
 }
 
-.fundo-login {
+.fundo-cadastro-categoria {
     background-color: #99FFB9;
-    padding: 5vh 5vh 0 0;
+    padding: 6vh 0 0 5vh;
 }
 
-.button-login {
+.button-cadastro-categoria {
     background-color: #99FFB9 !important;
 }
 
-.texto-login {
+.texto-cadastro-categoria {
     color: #06B566 !important;
     font-weight: bold !important;
 }

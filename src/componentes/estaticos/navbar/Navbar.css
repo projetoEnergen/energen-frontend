@@ -1,11 +1,10 @@
 .logo {
-    width: 150px;
+    width: 8vw;
     display: flex;
 }
 
 .login {
-    color: white;
-    text-decoration: none;
+    color: white !important;
 }
 
 .menu{
@@ -13,4 +12,7 @@
     justify-content: center;
     display: flex;
     align-content: center;
+}
+.alinhamento{
+    align-items:center
 }
