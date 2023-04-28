@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import './ListaCategorias.css'
-import useLocalStorage from 'react-use-localstorage';
 import { Categoria } from '../../../models/Categoria';
 import { getAll } from '../../../service/Service';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography, CardActions, Box, Button } from '@mui/material';
 import TabCategorias from '../tabCategorias/TabCategorias';
 import Carousel from '../../../componentes/estaticos/carousel/Carousel';
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import { addToken } from '../../../store/tokens/Action';
 
 function ListaCategoria() {
   
   const [categorias, setCategorias]= useState <Categoria>()
   
-  const [token, setToken]= useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
   
   const history =useNavigate();
+
+  const dispatch = useDispatch();
 
   const {id} = useParams<{id: string}>()
 
@@ -33,8 +39,9 @@ function ListaCategoria() {
 
   useEffect(()=>{
     if(token === ''){
+      dispatch(addToken(''));
       alert('Você precisa estar logado')
-    history("/login") 
+      history("/login") 
   }
 }, [token]);
 

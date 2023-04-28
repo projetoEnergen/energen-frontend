@@ -1,24 +1,31 @@
 import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
 import { getAll, getById } from '../../../service/Service';
 import { Produto } from '../../../models/Produto'
 import './ListaProdutos.css'
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToken } from '../../../store/tokens/Action';
 
 
 function ListaProdutos() {
 
   const [produtos, setProdutos] = useState<Produto[]>([])
   
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
 
   const { id } = useParams<{ id: string }>();
 
   const history = useNavigate();
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if(token === '') {
+      dispatch(addToken(''));
       history('/login')
     }
   }, [])

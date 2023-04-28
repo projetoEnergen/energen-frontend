@@ -3,23 +3,30 @@ import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Usuario } from '../../../models/Usuario';
 import { getAll, getById, put, post } from '../../../service/Service';
-import useLocalStorage from 'react-use-localstorage';
 import { Categoria } from '../../../models/Categoria';
 import { Produto } from '../../../models/Produto';
 import "./CadastroProdutos.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import { addToken } from '../../../store/tokens/Action';
 
 function Cadastroprodutos() {
   
   const history = useNavigate();
 
+  const dispatch = useDispatch();
+
   const { id } = useParams<{ id: string }>();
 
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
 
   useEffect(() => {
     if (token == "") {
+      dispatch(addToken(''));
       alert("Você precisa estar logado");
       history("/login");
     }

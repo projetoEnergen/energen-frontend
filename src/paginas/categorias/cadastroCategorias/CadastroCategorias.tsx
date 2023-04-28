@@ -9,16 +9,23 @@ import {
 import "./CadastroCategorias.css";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import { Categoria } from "../../../models/Categoria";
 import { getById, put, post } from "../../../service/Service";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
+import { addToken } from "../../../store/tokens/Action";
 
 function CadastroCategorias() {
+  
   const history = useNavigate();
+
+  const dispatch = useDispatch();
 
   const { id } = useParams<{ id: string }>();
 
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
 
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
@@ -27,6 +34,7 @@ function CadastroCategorias() {
 
   useEffect(() => {
     if (token == "") {
+      dispatch(addToken(''));
       alert("Você precisa efetuar o Login");
       history("/login");
     }

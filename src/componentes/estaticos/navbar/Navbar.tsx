@@ -13,13 +13,19 @@ import { Link, useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PersonIcon from "@mui/icons-material/Person";
 import "./Navbar.css";
-import useLocalStorage from "react-use-localstorage";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
+import { addToken } from "../../../store/tokens/Action";
 
 function Navbar() {
 
   const history = useNavigate();
 
-  const [token, setToken] = useLocalStorage("token");
+  const dispatch = useDispatch();
+
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+);
 
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -64,7 +70,7 @@ function Navbar() {
   }));
 
   function goLogout(){
-    setToken('')
+    dispatch(addToken(''));
     alert('Usuário Deslogado')
     history('/login')
   }
