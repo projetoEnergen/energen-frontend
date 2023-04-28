@@ -1,0 +1,26 @@
+.btnModal{
+    border-radius: 5px !important;
+    color: white !important;
+    background-color: #06B566 !important;
+    width: 10vw;
+}
+
+.btnModal:hover {
+    background-color: #000000 !important;
+    transition: 0.5s;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #99ffb9;
+    width: 35vw;
+    height: 80vh;
+}
+
+.margin-perguntas{
+    margin: 3%;
+}
+

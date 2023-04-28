@@ -59,7 +59,7 @@ function ListaProdutos() {
             {produto.descricao}
           </Typography>
           <Typography variant="body2" component="p">
-           {produto.preco}
+            {produto.preco}
           </Typography>
         </CardContent>
         <CardActions>

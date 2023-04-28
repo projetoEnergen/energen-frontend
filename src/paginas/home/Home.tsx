@@ -3,6 +3,8 @@ import { Typography, Grid, Button } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import ModalCupom from "../modalCupom/ModalCupom";
+import ModalPerguntas from "../modalPerguntas/ModalPerguntas";
 
 function Home() {
   return (
@@ -11,16 +13,17 @@ function Home() {
         <Grid alignItems="center" item xs={12}>
           <Box className="imagemBanner"></Box>
         </Grid>
-        <Grid>
+        <Grid  className="teste-back">
           <Box className="topo-home">
-            <Typography variant="h3" component={"h3"} align="center">
-              Sobre a troca:
-            </Typography>
+            
           </Box>
           <Grid xs={12} className="caixa-troca">
             <Grid item xs={6} className="texto-sobre">
-              <Typography variant="h6" component={"h6"}>
-                Selecione o produto que você deseja troca, no ato
+              
+              <Typography variant="h6" component={"h6"} className="borda-texto">
+              <h2>Sobre a troca</h2>
+              <hr />
+                <p>Selecione o produto que você deseja troca, no ato
                 disponibilizamos o cupom correspondente a categoria/produto que
                 você irá trocar, em seguida direcionamos para nossa pagina de
                 produtos, onde você irá escolher o que deseja comprar. Selecione
@@ -28,30 +31,28 @@ function Home() {
                 será aplicado, a partir do pagamento confirmado,
                 disponibilizamos o código de retirada do produto antigo
                 fornecido pelo nosso parceiro Eco, fazemos a
-                entrega do seu produto novo e mais sustentável.
+                entrega do seu produto novo e mais sustentável.</p>
               </Typography>
             </Grid>
             <Grid item xs={6}>
               <img  className="imagem-troca" src="https://ik.imagekit.io/energen/ImagensDessa/ezgif.com-webp-to-png.png?updatedAt=1682633452485" alt="" />
             </Grid>
           </Grid>
-          <Box className="margemButton">
-            <Button variant="contained">
-              Perguntas Frequentes
-            </Button>
-            <Button type="submit" variant="contained">
-              Cupom de Desconto
-            </Button>
-          </Box>
+          {/* <Grid xs={12} style={{backgroundColor: '#ffffff'}}> */}
+            <Box className="margemButton">
+              <ModalCupom />
+              <ModalPerguntas />
+            </Box>
+          {/* </Grid> */}
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} className="teste-back">
           <Typography
             className="tituloIcone"
             variant="h3"
             component={"h3"}
             align="center"
           >
-            O que você quer comprar?
+            <h5>Escolha o produto desejado:</h5>
           </Typography>
           <Grid item xs={12} className="alinha tituloIcone">
             <Link to="/produtos">
