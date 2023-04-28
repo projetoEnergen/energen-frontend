@@ -4,8 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Usuario } from "../../models/Usuario";
 import { cadastrarUsuario } from "../../service/Service";
 import "./CadastroUsuario.css";
+import { toast } from "react-toastify";
 
 function CadastroUsuario() {
+
   const history = useNavigate();
 
   const [usuario, setUsuario] = useState<Usuario>({
@@ -50,12 +52,39 @@ function CadastroUsuario() {
           usuario,
           setUsuarioResult
         );
-        alert("Usuário cadastrado com sucesso");
+        toast.success('Usuário cadastrado com sucesso', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       } catch (error) {
-        alert("Por favor, verifique os campos");
+        toast.error('Por favor, verifique os campos!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       }
     } else {
-      alert("As senhas não coincidem");
+      toast.error('As senhas não coincidem!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       setConfirmarSenha("");
       setUsuario({
         ...usuario,

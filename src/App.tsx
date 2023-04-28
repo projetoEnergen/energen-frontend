@@ -16,10 +16,13 @@ import "./App.css";
 import ListaCategoria from "./paginas/categorias/listaCategorias/ListaCategorias";
 import { Provider } from "react-redux";
 import store from "./store/tokens/Store";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <Provider store={store}>
+    <ToastContainer />
     <BrowserRouter>
       <Navbar />
       <div style={{ minHeight: "100vh" }}>

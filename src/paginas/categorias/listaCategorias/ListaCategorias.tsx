@@ -9,6 +9,7 @@ import Carousel from '../../../componentes/estaticos/carousel/Carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { addToken } from '../../../store/tokens/Action';
+import { toast } from 'react-toastify';
 
 function ListaCategoria() {
   
@@ -40,7 +41,16 @@ function ListaCategoria() {
   useEffect(()=>{
     if(token === ''){
       dispatch(addToken(''));
-      alert('Você precisa estar logado')
+      toast.info('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       history("/login") 
   }
 }, [token]);
