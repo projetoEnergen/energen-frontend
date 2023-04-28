@@ -14,9 +14,12 @@ import DeletarProdutos from "./paginas/produtos/deletarProdutos/DeletarProdutos"
 import ListaCategorias from "./paginas/categorias/listaCategorias/ListaCategorias";
 import "./App.css";
 import ListaCategoria from "./paginas/categorias/listaCategorias/ListaCategorias";
+import { Provider } from "react-redux";
+import store from "./store/tokens/Store";
 
 function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Navbar />
       <div style={{ minHeight: "100vh" }}>
@@ -38,6 +41,7 @@ function App() {
       </div>
       <Footer />
     </BrowserRouter>
+    </Provider>
   );
 }
 
