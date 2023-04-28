@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.bannerSobre {
+
+    background-color: var(--blue-light);
+    justify-content: center;
+    display: flex;
+    padding: 30px;
+}
+
+.titulosDestaqueBanner {
+    font-family: 'Libre Franklin', sans-serif !important;
+    color: white;
+}
+
+.sobreProjeto {
+    background-color: var(--green-dark);
+    color: white;
+
+}
+
+.imgSobreProjeto {
+    border-radius: 100%;
+}
+
+.sobreEnerGen {
+    background-color: var(--blue-light);
+    color: white;
+}
+
+.frasesDestaque {
+    color: var(--yellow-light);
+    font-family: 'Libre Franklin', sans-serif !important;
+
+}
+
+.titulosDestaque {
+    font-family: 'Libre Franklin', sans-serif !important;
+
+}
+
+.parceirosComerciais {
+    background-color: var(--green-dark);
+    color: white;
+}
+
+.parceiroColeta {
+    background-color: var(--green-dark);
+    color: white;
+}
+
+.texto {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: medium !important;
+
+}
+
+.chamadaEquipe {
+    background-color: var(--blue-light);
+    color: white;
+}
+
+.cardsEquipe1 {
+    background-color: var(--blue-light);
+}
+
+.cardIndividual {
+    background-color: var(--green-dark);
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.cardIndividual-links {
+    color: var(--green-light);
+}
