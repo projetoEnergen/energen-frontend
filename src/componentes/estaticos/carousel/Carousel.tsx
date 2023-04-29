@@ -6,8 +6,10 @@ import './Carousel.css'
 function Carousel() {
   const items = [
     <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
+    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Banner/Design_sem_nome__3_.png?updatedAt=1682632172250" role="presentation" />,
+    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
     <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/60_.png?updatedAt=1681932495224" role="presentation" />,
-    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul__1_.png?updatedAt=1681950308729" role="presentation" />,
+    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
     <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Banner/Design_sem_nome__3_.png?updatedAt=1682632172250" role="presentation" />,
   ];
 
@@ -21,10 +23,14 @@ function Carousel() {
     },
   };
 
+  const carrossel = {
+    className:"carrossel",
+  }
+
   return (
     <AliceCarousel
-      mouseTracking
       items={items}
+      mouseTracking
       autoPlay
       infinite
       responsive={responsivo}

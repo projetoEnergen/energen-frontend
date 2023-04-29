@@ -1,8 +1,8 @@
 .imagemBanner{
     background-image: url('https://ik.imagekit.io/energen/Banner/bannerDessaRedimensionado-14.png?updatedAt=1682008231610');
     background-position:'center';
-    min-height: 94vh;
-    min-width: 120vh;
+    min-height: 90vh;
+    min-width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -61,10 +61,6 @@
     background-color: #06B566;
     border-radius: 2rem;
     padding: 2.95%;
-}
-
-.topo-home {
-    margin-top: 4%;
 }
 
 .teste-back {

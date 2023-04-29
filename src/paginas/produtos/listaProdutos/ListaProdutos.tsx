@@ -7,6 +7,7 @@ import './ListaProdutos.css'
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToken } from '../../../store/tokens/Action';
+import Price from './../../../componentes/estaticos/precoProdutos/Price'
 
 
 function ListaProdutos() {
@@ -49,30 +50,29 @@ function ListaProdutos() {
       <Card variant="outlined" className='card-produto'>
           <img className='imagem-produto' src={produto.foto} alt="" />
         <CardContent>
-          <Typography variant="h5" component="h2">
+          <Typography variant="h5" component="h5">
             {produto.nome}
           </Typography>
-          <Typography variant="body2" component="p">
+          <Typography variant="h6" component="h6">
             {produto.marca}
           </Typography>
-          <Typography variant="body2" component="p">
+          <Typography variant="body2" component="p" className='padding-listaProdutos'>
             {produto.descricao}
           </Typography>
-          <Typography variant="body2" component="p">
-            {produto.preco}
+          <Typography variant="h6" component="h6">
+            R$ <Price value={produto.preco} />
           </Typography>
         </CardContent>
         <CardActions>
-          <Box display="flex" justifyContent="center" mb={1.5}>
-
-            <Link to={`/atualizarProdutos/${produto.id}`} className="text-decorator-none" >
-              <Box mx={1}>
-                <Button variant="contained" className="marginLeft" size='small' color="primary" >
+          <Box display="flex" justifyContent="center">
+            <Link to={`/atualizarProdutos/${produto.id}`}>
+              <Box>
+                <Button variant="contained" size='small' color="primary" >
                   atualizar
                 </Button>
               </Box>
             </Link> 
-            <Link to={`/deletarProdutos/${produto.id}`} className="text-decorator-none">
+            <Link to={`/deletarProdutos/${produto.id}`}>
               <Box mx={1}>
                 <Button variant="contained" size='small' color="secondary">
                   deletar

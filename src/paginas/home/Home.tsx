@@ -14,7 +14,7 @@ function Home() {
           <Box className="imagemBanner"></Box>
         </Grid>
         <Grid  className="teste-back">
-          <Box className="topo-home">
+          <Box>
             
           </Box>
           <Grid xs={12} className="caixa-troca">
