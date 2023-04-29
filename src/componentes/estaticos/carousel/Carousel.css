@@ -1,4 +1,8 @@
 .imagem-carrosel {
     height: 30rem;
-    width: 48rem;
+    width: 50vw;
+}
+
+.carrossel {
+    background-color: aquamarine;
 }

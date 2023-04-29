@@ -1,7 +1,6 @@
 import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import {Typography} from "@material-ui/core";
 import {Grid} from "@mui/material";
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
@@ -11,13 +10,18 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <Grid className="left" spacing={0} container item xs={12} style={{backgroundColor:'#1FE291'}}  >
+      <Grid container item xs={12} style={{backgroundColor:'#1FE291'}}  >
             <Grid style={{backgroundColor:'#1FE291', padding:'3vh'}} item xs={2}><img className="logoFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LogoFooter.png?updatedAt=1681508432602" alt="logo texto"/ >
             <Grid>
-                          <EmailSharpIcon style={{color:'white'}}></EmailSharpIcon>
-                          <TwitterIcon style={{color:'white'}}></TwitterIcon>
-                          <LinkedInIcon style={{color:'white'}}></LinkedInIcon>
-                          <InstagramIcon style={{color:'white'}}></InstagramIcon>
+                          <Link to={'https://linktr.ee/EnerGen?utm_source=qr_code'}> 
+                              <EmailSharpIcon className="link-footer"></EmailSharpIcon>
+                          </Link>
+                          <Link to={'https://twitter.com/EnergenPro?t=1XFGbu4OzybBqgb5ckXoug&s=08'}>
+                              <TwitterIcon className="link-footer"></TwitterIcon>
+                          </Link>
+                          <Link to={'https://www.instagram.com/projeto_energen/'}>
+                              <InstagramIcon className="link-footer"></InstagramIcon>
+                          </Link>         
             </Grid>
             </Grid>
 
@@ -29,10 +33,12 @@ function Footer() {
             </Grid>
 
             <Grid item xs={4}color={'white'}>
-            <Typography variant="subtitle2">Perguntas Frequentes</Typography>
-            <Typography variant="subtitle2">Desenvolvedores</Typography>
-            <Typography variant="subtitle2">Suporte</Typography>
-
+            <Link to={'/sobre'} className="link-footer">
+                <Typography variant="subtitle2">Sobre</Typography>  
+            </Link>
+            <Link to={'https://linktr.ee/EnerGen?utm_source=qr_code'} className="link-footer">
+              <Typography variant="subtitle2">Suporte</Typography>
+            </Link>
             </Grid>
             
             </Grid>

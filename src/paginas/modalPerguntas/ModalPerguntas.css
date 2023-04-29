@@ -16,8 +16,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #99ffb9;
-    width: 35vw;
+    width: 30vw;
     height: 80vh;
+    border-radius: 1vh;
 }
 
 .margin-perguntas{

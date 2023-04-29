@@ -1,6 +1,3 @@
-.logo {
-
-}
 .logoFooter{
     width: 40%;
 
@@ -11,7 +8,6 @@
 
 }
 .left {
-
     align-items: center;
 }
 
@@ -33,13 +29,11 @@
 }
 
 .CopyRight{
-    
     align-items:center;
     text-align:center; color:white; 
     background-color:#06B566 ;
-    padding-top:0.4%;
-    height:4.6vh
-    
+    padding-top:0.5%;
+    height:4.6vh;
 }
 
 .link-footer {
