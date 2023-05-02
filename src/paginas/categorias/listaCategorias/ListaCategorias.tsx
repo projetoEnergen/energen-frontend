@@ -75,7 +75,7 @@ return (
             {produto.descricao}
           </Typography>
           <Typography variant="body2" component="p">
-           {produto.preco}
+            {produto.preco}
           </Typography>
         </CardContent>
         <CardActions>
@@ -102,7 +102,7 @@ return (
     ))}  
 </Grid>
 </>
- );
+);
 }
 
 export default ListaCategoria;
