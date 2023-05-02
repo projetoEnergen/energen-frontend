@@ -17,10 +17,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 3% 0 1% 5%;
-    background-color: #99ffb941;
-   
 }
 
 .padding-listaProdutos {
     padding: 0.5% 0;
+}
+
+.input-pesquisa input{
+    width: 60%;
+    height: 5vh; 
+    position: relative;
+    padding: 1%;
+    margin-top: 4%;
+}
+
+.search {
+    transform: translateY(30%);
 }
