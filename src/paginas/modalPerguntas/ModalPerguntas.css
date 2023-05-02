@@ -2,7 +2,9 @@
     border-radius: 5px !important;
     color: white !important;
     background-color: #06B566 !important;
-    width: 10vw;
+    width: 20vw;
+    height: 10vh;
+    font-size: large !important;
 }
 
 .btnModal:hover {
@@ -16,9 +18,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #99ffb9;
-    width: 30vw;
-    height: 80vh;
+    width: 30%;
+    height: 58%;
+    padding: 1%;
     border-radius: 1vh;
+}
+
+.padding-bottom {
+    padding-bottom: 3%;
 }
 
 .margin-perguntas{

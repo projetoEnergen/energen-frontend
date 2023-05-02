@@ -5,6 +5,20 @@
     width: 10vw;
 }
 
+.btnCupom:hover {
+    background-color: #000000 !important;
+    transition: 0.5s;
+}
+
+.btnCupom{
+    border-radius: 5px !important;
+    color: white !important;
+    background-color: #06b566 !important;
+    font-size: large !important;
+    width: 20vw;
+    height: 10vh;
+}
+
 .modal-1 {
     position: absolute;
     top: 50%;
@@ -12,10 +26,24 @@
     transform: translate(-50%, -50%);
     background-color: #99FFB9;
     width: 30vw;
-    height: 80vh;
+    height: 58%;    
+    padding: 1%;
     border-radius: 1vh;
+    text-align: center;
 }
 
 .margin-perguntas1{
     margin: 3%;
+}
+
+.padding-bottom-1 {
+    padding-bottom: 3%;
+}
+
+.imagem-desconto {
+    width: 100%;
+}
+
+.padding-top {
+    padding-top: 5%
 }

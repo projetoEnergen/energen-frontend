@@ -565,7 +565,7 @@ function Sobre() {
             <CardActions className="cardIndividual">
               <a
                 className="cardIndividual-links"
-                href="linkedin.com/in/albuquerquenicolas"
+                href="https://www.linkedin.com/in/albuquerquenicolas"
                 target="_blank"
               >
                 <LinkedInIcon />
