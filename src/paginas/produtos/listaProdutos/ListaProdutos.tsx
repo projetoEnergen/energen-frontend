@@ -44,7 +44,7 @@ function ListaProdutos() {
   },[produtos])
 
   return ( 
-  <Grid className='caixa' xs={12}>
+  <Grid className='caixa-produto' xs={12}>
     {produtos.map(produto => (
       <Grid xs={4}>
       <Card variant="outlined" className='card-produto'>
