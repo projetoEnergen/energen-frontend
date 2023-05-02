@@ -13,7 +13,7 @@ function Footer() {
       <Grid container item xs={12} style={{backgroundColor:'#1FE291'}}  >
             <Grid style={{backgroundColor:'#1FE291', padding:'3vh'}} item xs={2}><img className="logoFooter" src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/LogoFooter.png?updatedAt=1681508432602" alt="logo texto"/ >
             <Grid>
-                          <Link to={'https://linktr.ee/EnerGen?utm_source=qr_code'}> 
+                          <Link to={'mailto:projetoenergen@gmail.com'}> 
                               <EmailSharpIcon className="link-footer"></EmailSharpIcon>
                           </Link>
                           <Link to={'https://twitter.com/EnergenPro?t=1XFGbu4OzybBqgb5ckXoug&s=08'}>
@@ -36,7 +36,7 @@ function Footer() {
             <Link to={'/sobre'} className="link-footer">
                 <Typography variant="subtitle2">Sobre</Typography>  
             </Link>
-            <Link to={'https://linktr.ee/EnerGen?utm_source=qr_code'} className="link-footer">
+            <Link to={'mailto:projetoenergen@gmail.com'} className="link-footer">
               <Typography variant="subtitle2">Suporte</Typography>
             </Link>
             </Grid>
