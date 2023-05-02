@@ -59,11 +59,11 @@ return (
   <>
   <Carousel />
   <TabCategorias />
-  <Grid className='caixa' xs={12}>
+  <Grid className='caixa-categoria' xs={12}>
   {categorias?.produto?.map(produto => (
       <Grid xs={4}>
-      <Card variant="outlined" className='card-produto'>
-          <img className='imagem-produto' src={produto.foto} alt="" />
+      <Card variant="outlined" className='card-categoria'>
+          <img className='imagem-categoria' src={produto.foto} alt="" />
         <CardContent>
           <Typography variant="h5" component="h2">
             {produto.nome}
