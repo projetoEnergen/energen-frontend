@@ -22,10 +22,9 @@
 }
 
 .imagem-troca{
-    width: 100%;
+    width: 80%;
     object-fit: fill;
-    border-radius: 2rem;
-    
+    margin-top: 4%;
 }
 
 .margemButton{
@@ -54,15 +53,21 @@
 
 .texto-sobre {
     text-align: center;
-    
 }
 
 .borda-texto {
-    background-color: #06B566;
+    background-color: #06b566b5;
     border-radius: 2rem;
     padding: 2.95%;
+    min-height: 58vh;
+    align-items: center;
+    color: #ffffff
 }
 
-.teste-back {
-    background-color: #99ffb98e;
+.borda-texto p{
+    margin-top: 2%;
+    font-size:x-large;
 }
+/* .teste-back {
+    background-color: #99ffb98e;
+} */

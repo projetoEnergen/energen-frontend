@@ -6,11 +6,11 @@ import './Carousel.css'
 function Carousel() {
   const items = [
     <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
-    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Banner/Design_sem_nome__3_.png?updatedAt=1682632172250" role="presentation" />,
+    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Promo%C3%A7%C3%A3o/50_.png?updatedAt=1683036825129" role="presentation" />,
     <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
-    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/60_.png?updatedAt=1681932495224" role="presentation" />,
-    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Home/homeazul.png?updatedAt=1681947191278" role="presentation" />,
-    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Banner/Design_sem_nome__3_.png?updatedAt=1682632172250" role="presentation" />,
+    <img className="imagem-carrosel back-imagem" src="https://ik.imagekit.io/energen/Promo%C3%A7%C3%A3o/At%C3%A9_50__de_desconto_na_troca_do_seu_usado.png?updatedAt=1683036335122" role="presentation" />,
+    <img className="imagem-carrosel" src="https://ik.imagekit.io/energen/Carrossel_/carrossel1-16-16.png?updatedAt=1683060885203" role="presentation" />,
+    <img className="imagem-carrosel back-imagem" src="https://ik.imagekit.io/energen/Carrossel_/carrossel2-17-17.png?updatedAt=1683060885203  " role="presentation" />,
   ];
 
   const responsivo = {
