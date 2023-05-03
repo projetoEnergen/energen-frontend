@@ -65,7 +65,7 @@ function ListaProdutos() {
 
   return (
     <Grid textAlign={'center'} style={{backgroundColor:'#99ffb941'}}>
-      <Grid xs={12} className="input-pesquisa">
+      <Grid xs={6}  mx={'auto'} className="input-pesquisa">
         <input type="search" placeholder="Busca na EnerGen"  value={search} onChange={handleSearchChange} />
         <SearchIcon className="search" />
       </Grid>
