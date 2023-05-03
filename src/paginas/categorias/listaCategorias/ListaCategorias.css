@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     margin-bottom: 20%;
-    height: 85vh;
+    min-height: 70vh;
 }
 
 .imagem-categoria {

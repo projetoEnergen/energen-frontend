@@ -29,7 +29,7 @@ function ModalPerguntas() {
             >
                 
                 <div className='modal '>
-                <Scrollbar style={{ height: 520, paddingRight: '2%' }}>
+                <Scrollbar style={{ height: '100%', paddingRight: '2%' }}>
                     <Box display="flex" justifyContent="flex-end">
                         <CloseIcon onClick={handleClose} />
                     </Box>

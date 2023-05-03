@@ -26,14 +26,14 @@
     transform: translate(-50%, -50%);
     background-color: #99FFB9;
     width: 30vw;
-    height: 58%;    
+    height: 63%;    
     padding: 1%;
     border-radius: 1vh;
     text-align: center;
 }
 
 .margin-perguntas1{
-    margin: 3%;
+    margin: 3% 3% 6% 3%;
 }
 
 .padding-bottom-1 {
@@ -45,5 +45,5 @@
 }
 
 .padding-top {
-    padding-top: 5%
+    padding-top: 5%;
 }
