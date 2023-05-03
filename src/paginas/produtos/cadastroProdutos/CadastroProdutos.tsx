@@ -219,7 +219,6 @@ function Cadastroprodutos() {
           <FormControl>
             <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
             <Select
-              className='select-categoria'
               labelId="demo-simple-select-helper-label"
               id="demo-simple-select-helper"
               onChange={(e) =>
@@ -231,7 +230,7 @@ function Cadastroprodutos() {
               }
             >
               {categorias.map((categoria) => (
-                <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+                <MenuItem className='button-categoria' value={categoria.id}>{categoria.nome}</MenuItem>
               ))}
             </Select>
             <Button

@@ -14,18 +14,14 @@ function Carousel() {
   ];
 
   const responsivo = {
-    0: {
+    1024: {
       items: 1,
     },
-    1024: {
+    300: {
       items: 2,
       itemsFit: "contain",
     },
   };
-
-  const carrossel = {
-    className:"carrossel",
-  }
 
   return (
     <AliceCarousel
