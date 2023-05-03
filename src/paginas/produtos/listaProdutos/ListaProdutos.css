@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     margin-bottom: 20%;
-    height: 85vh;
+    min-height: 70vh;
 }
 
 .imagem-produto {
@@ -24,7 +24,7 @@
 }
 
 .input-pesquisa input{
-    width: 60%;
+    width: 50%;
     height: 5vh; 
     position: relative;
     padding: 1%;
