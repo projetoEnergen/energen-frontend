@@ -24,6 +24,7 @@
 
 .imgSobreProjeto {
     border-radius: 100%;
+    width: 350px;
 }
 
 .sobreEnerGen {
@@ -72,7 +73,14 @@
     text-align: center;
     justify-content: center;
     color: white;
+
 }
+.cardIndividualTamanho {
+    width: 230px;
+    height: 430px;
+    
+}
+
 
 .cardIndividual-links {
     color: var(--green-light);

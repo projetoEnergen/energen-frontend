@@ -27,28 +27,29 @@ function Sobre() {
               Compromisso com a energia que move o mundo.
             </Typography>
           </Grid>
-          <Grid>
+          <Grid item xs={6}>
             <Box>
               <img
                 src="https://ik.imagekit.io/energen/Sobre/linda_linda.png?updatedAt=1682523662307"
-                alt=""
+                alt="banner da página sobre"
+                width={"100%"}
               />
             </Box>
           </Grid>
         </Grid>
 
         <Grid display={"flex"} className="sobreProjeto" alignItems="center">
-          <Grid item xs={4}>
+          <Grid item xs={8}>
             <Box margin={"30px"}>
               <img
                 className="imgSobreProjeto"
                 src="https://ik.imagekit.io/energen/Sobre/Design_sem_nome.png?updatedAt=1682529792687"
                 alt=""
-                width={350}
+                
               />
             </Box>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12}>
             <Grid margin={"30px"}>
               <Typography
                 className="frasesDestaque"
@@ -59,28 +60,32 @@ function Sobre() {
                 Por que falar sobre eficiência energética é importante?
               </Typography>
             </Grid>
-            <Typography
-              variant="h6"
-              component={"h6"}
-              style={{ margin: "30px" }}
-              align="justify"
-              className="texto"
-            >
-              Falar sobre eficiência energética e energias limpas é de extrema
-              importância tanto para o Brasil quanto para o mundo. Esses temas
-              estão diretamente relacionados à busca por um desenvolvimento
-              sustentável, à preservação do meio ambiente e ao combate às
-              mudanças climáticas. É fundamental destacar que, quando se trata
-              de energia, não se trata apenas de fornecer mais recursos
-              energéticos, mas sim de criar soluções que otimizem todo o
-              ecossistema. Isso inclui medidas relacionadas ao consumo e redução
-              de custos, à segurança energética, o combate ao desperdício e à
-              promoção da eficiência.
-            </Typography>
+            <Grid item xs={12}>
+              <Typography
+                variant="h6"
+                component={"h6"}
+                style={{ margin: "30px" }}
+                align="justify"
+                className="texto"
+              >
+                Falar sobre eficiência energética e energias limpas é de extrema
+                importância tanto para o Brasil quanto para o mundo. Esses temas
+                estão diretamente relacionados à busca por um desenvolvimento
+                sustentável, à preservação do meio ambiente e ao combate às
+                mudanças climáticas. É fundamental destacar que, quando se trata
+                de energia, não se trata apenas de fornecer mais recursos
+                energéticos, mas sim de criar soluções que otimizem todo o
+                ecossistema. Isso inclui medidas relacionadas ao consumo e
+                redução de custos, à segurança energética, o combate ao
+                desperdício e à promoção da eficiência.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
 
         <Grid
+          item
+          xs={12}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
@@ -123,6 +128,7 @@ function Sobre() {
               <b>Junte-se a nós nessa jornada!</b>
             </Typography>
           </Grid>
+
           <Grid item xs={3}>
             <Box>
               <img
@@ -134,7 +140,7 @@ function Sobre() {
           </Grid>
         </Grid>
 
-        <Grid className="sobreEnerGen">
+        <Grid item xs={12} className="sobreEnerGen">
           <Grid
             item
             xs={9}
@@ -183,25 +189,25 @@ function Sobre() {
               alignItems={"center"}
               style={{ margin: "30px" }}
             >
-              <Box display={"flex"} flex={1}>
+              <Box flex={1}>
                 <img
                   src="https://ik.imagekit.io/energen/logo_parceiros/samsung-logo.png?updatedAt=1682459635272"
-                  alt=""
-                  width={"85%"}
+                  alt="logo Samsung"
+                  width={"80%"}
                 />
               </Box>
-              <Box display={"flex"} flex={1}>
+              <Box flex={1}>
                 <img
                   src="https://ik.imagekit.io/energen/logo_parceiros/arno-logo.png?updatedAt=1682459662990"
-                  alt=""
+                  alt="logo Arno"
                   width={"60%"}
                 />
               </Box>
-              <Box display={"flex"} flex={1}>
+              <Box flex={1}>
                 <img
                   src="https://ik.imagekit.io/energen/logo_parceiros/electrolux-logo.png?updatedAt=1682459649985"
-                  alt=""
-                  width={"85%"}
+                  alt="logo Eletrolux"
+                  width={"80%"}
                 />
               </Box>
             </Grid>
@@ -231,7 +237,7 @@ function Sobre() {
                 consciente do que não é reaproveitável.
               </Typography>
             </Grid>
-            <Grid display="flex" >
+            <Grid display="flex">
               <Grid>
                 <Typography
                   variant="h6"
@@ -246,7 +252,7 @@ function Sobre() {
                 </Typography>
               </Grid>
 
-              <Grid style={{ margin: " 0px 30px 0px 0px " }} >
+              <Grid style={{ margin: " 0px 30px 0px 0px " }}>
                 <img
                   src="https://ik.imagekit.io/energen/Sobre/reciclagen.png?updatedAt=1682648861434"
                   alt=""
@@ -289,15 +295,11 @@ function Sobre() {
           display="flex"
           justifyContent={"center"}
         >
-          <Card
-            className="cardIndividual"
-            sx={{ maxWidth: 250 }}
-            style={{ margin: "30px" }}
-          >
+          <Card className="cardIndividualTamanho" style={{ margin: "30px" }}>
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/123555504_v_4?updatedAt=1682460592334"
               title="foto de perfil de Andreza Silvestre"
             />
@@ -312,11 +314,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                Esteja por inteira, independente de onde estiver.
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/andreza-silvestre/"
@@ -334,15 +333,11 @@ function Sobre() {
             </CardActions>
           </Card>
 
-          <Card
-            className="cardIndividual"
-            sx={{ maxWidth: 250 }}
-            style={{ margin: "30px" }}
-          >
+          <Card className="cardIndividualTamanho" style={{ margin: "30px" }}>
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/lia-profile_f6j65vYgo?updatedAt=1682637355142"
               title="foto de perfil de Lia Laurindo"
             />
@@ -358,12 +353,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                Acredito que tecnologia é isso: criar possibilidades, seja onde
-                for.
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/lialaurindo/"
@@ -381,15 +372,11 @@ function Sobre() {
             </CardActions>
           </Card>
 
-          <Card
-            className="cardIndividual"
-            sx={{ maxWidth: 250 }}
-            style={{ margin: "30px" }}
-          >
+          <Card className="cardIndividualTamanho" style={{ margin: "30px" }}>
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/100010843_v_4?updatedAt=1682460642174"
               title="foto de perfil de Jaine Santos"
             />
@@ -405,13 +392,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                <br />
-                <br />
-                <br />
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/jainejosiane/"
@@ -437,14 +419,14 @@ function Sobre() {
           justifyContent={"center"}
         >
           <Card
-            className="cardIndividual"
+            className="cardIndividualTamanho"
             sx={{ maxWidth: 250 }}
             style={{ margin: "30px" }}
           >
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/105376533_v_4?updatedAt=1682460671307"
               title="foto de perfil de Dener Verçosa"
             />
@@ -460,13 +442,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                <br />
-                <br />
-                <br />
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/dener-vercosa/"
@@ -485,14 +462,14 @@ function Sobre() {
           </Card>
 
           <Card
-            className="cardIndividual"
+            className="cardIndividualTamanho"
             sx={{ maxWidth: 250 }}
             style={{ margin: "30px" }}
           >
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/1680746249065.jpeg_width_396_height_396?updatedAt=1682553815731"
               title="foto de perfil de Kelvin Souza"
             />
@@ -508,13 +485,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                <br />
-                <br />
-                <br />
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/kelvin-souza-/"
@@ -533,14 +505,14 @@ function Sobre() {
           </Card>
 
           <Card
-            className="cardIndividual"
+            className="cardIndividualTamanho"
             sx={{ maxWidth: 250 }}
             style={{ margin: "30px" }}
           >
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/123500218_v_4?updatedAt=1682460617231"
               title="foto de perfil de Nicolas Albuquerque"
             />
@@ -556,13 +528,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                <br />
-                <br />
-                <br />
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/albuquerquenicolas"
@@ -579,15 +546,11 @@ function Sobre() {
               </a>
             </CardActions>
           </Card>
-          <Card
-            className="cardIndividual"
-            sx={{ maxWidth: 250 }}
-            style={{ margin: "30px" }}
-          >
+          <Card className="cardIndividualTamanho" style={{ margin: "30px" }}>
             <CardMedia
               className="cardIndividual"
               // style={{ margin: "10px" }}
-              sx={{ height: 200 }}
+              sx={{ minHeight: "55%" }}
               image="https://ik.imagekit.io/energen/desenvolvedores/123783746_v_4?updatedAt=1682460695413"
               title="foto de perfil de Fábio Martins"
             />
@@ -603,13 +566,8 @@ function Sobre() {
               >
                 Software Developer
               </Typography>
-              <Typography variant="body2" className="cardIndividual">
-                <br />
-                <br />
-                <br />
-              </Typography>
             </CardContent>
-            <CardActions className="cardIndividual">
+            <CardActions className="cardIndividual" style={{ padding: "1px" }}>
               <a
                 className="cardIndividual-links"
                 href="https://www.linkedin.com/in/martinsdfabio/"
