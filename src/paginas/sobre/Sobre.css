@@ -5,7 +5,7 @@
 
 .bannerSobre {
 
-    background-color: var(--blue-light);
+    background-color: var(--orange-light);
     justify-content: center;
     display: flex;
     padding: 30px;
@@ -78,9 +78,9 @@
 .cardIndividualTamanho {
     width: 230px;
     height: 430px;
+    background-color: var(--green-dark) !important;
     
 }
-
 
 .cardIndividual-links {
     color: var(--green-light);

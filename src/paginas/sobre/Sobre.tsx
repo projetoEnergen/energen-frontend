@@ -45,7 +45,6 @@ function Sobre() {
                 className="imgSobreProjeto"
                 src="https://ik.imagekit.io/energen/Sobre/Design_sem_nome.png?updatedAt=1682529792687"
                 alt=""
-                
               />
             </Box>
           </Grid>
@@ -305,7 +304,7 @@ function Sobre() {
             />
             <CardContent className="cardIndividual">
               <Typography gutterBottom variant="h5" component="div">
-                Andreza Silvestre
+                Andreza <br /> Silvestre
               </Typography>
               <Typography
                 variant="body1"
