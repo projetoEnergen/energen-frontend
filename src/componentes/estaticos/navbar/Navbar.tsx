@@ -10,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import { Link, useNavigate } from "react-router-dom";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from "@mui/icons-material/Person";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -75,7 +75,7 @@ function Navbar() {
             </Link>
             </Box>
             <Box display={'flex'} alignItems={'center'} gap={3}>
-            <AddShoppingCartIcon />
+            <ShoppingCartIcon />
           </Box>
 
           </Box>

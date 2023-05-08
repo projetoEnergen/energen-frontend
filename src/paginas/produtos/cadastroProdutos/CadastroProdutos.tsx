@@ -240,7 +240,7 @@ function Cadastroprodutos() {
               color="primary"
               disabled= {categoria.id === 0}
             >
-              {categoria.id === 0 ? 'Selecione uma categoria' : 'Atualizar'}
+              {produto.id === 0 ? 'cadastrar' : 'Atualizar'}
             </Button>
           </FormControl>
         </form>
