@@ -39,3 +39,11 @@
 .link-footer {
     color: white !important;
 }
+
+.text-align {
+    text-align: center;
+}
+
+.padding {
+    padding: 3vh 8vh 3vh 3vh;
+}
