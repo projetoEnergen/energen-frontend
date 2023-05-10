@@ -7,6 +7,7 @@ import EmailSharpIcon from "@mui/icons-material/EmailSharp";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import Box from '@mui/material/Box';
 
 function Footer() {
   return (
@@ -86,6 +87,7 @@ function Footer() {
           xs={2}
         >
           <Grid className="left padding">
+            <Box>Formas de Pagamento</Box>
             <img
               className="logoBoleto left"
               src="https://ik.imagekit.io/energen/IDENTIDADE_VISUAL/boleto.png?updatedAt=1681505619680"

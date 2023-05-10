@@ -171,6 +171,12 @@ function Cadastroprodutos() {
             variant="outlined"
             name="nome"
             margin="normal"
+            error={produto.nome.length < 5 && produto.nome.length > 0}
+              helperText={
+                produto.nome.length < 5 && produto.nome.length > 0
+                  ? "O nome do produto deve conter pelo menos 5 caracteres"
+                  : ""
+              }
             fullWidth
             style={{marginTop:'2vw'}}
           />
@@ -192,6 +198,12 @@ function Cadastroprodutos() {
             name="descricao"
             variant="outlined"
             margin="normal"
+            error={produto.descricao.length < 5 && produto.descricao.length > 0}
+              helperText={
+                produto.descricao.length < 5 && produto.descricao.length > 0
+                  ? "A descrição do produto deve conter pelo menos 5 caracteres"
+                  : ""
+              }
             fullWidth
             minRows={4}
             multiline

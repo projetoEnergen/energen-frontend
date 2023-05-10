@@ -183,6 +183,12 @@ function CadastroUsuario() {
               type="password"
               name="senha"
               value={usuario.senha}
+              error={usuario.senha.length < 8 && usuario.senha.length > 0}
+              helperText={
+                usuario.senha.length < 8 && usuario.senha.length > 0
+                  ? "A senha deve conter pelo menos 8 caracteres"
+                  : ""
+              }
               onChange={(event: ChangeEvent<HTMLInputElement>) =>
                 updateModel(event)
               }
@@ -201,6 +207,12 @@ function CadastroUsuario() {
               variant="outlined"
               label="Confirmar Senha"
               margin="normal"
+              error={confirmarSenha.length < 8 && confirmarSenha.length > 0}
+              helperText={
+                confirmarSenha.length < 8 && confirmarSenha.length > 0
+                  ? "A senha deve conter pelo menos 8 caracteres"
+                  : ""
+              }
               fullWidth
             ></TextField>
             <Box marginTop={2} textAlign={"center"}>
